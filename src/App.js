@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HeaderP from "./composant/Header/HeaderP";
+import "./style3.css";
+import "./style2.css";
+import "./style4.css";
+import "./style1.css";
+
+import SubHeader from "./composant/Header/SubHeader";
+import HomeP from "./composant/Home/HomeP";
+import FooterP from "./composant/Footer/FooterP";
+import SportvirtuelBanner from "./composant/Sportvirtuel/SportvirtuelBanner";
+import SportVirtuelContent from "./composant/Sportvirtuel/SportVirtuelContent";
+import SportvirtuelP from "./composant/Sportvirtuel/SportvirtuelP";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderP></HeaderP>
+      <SubHeader></SubHeader>
+      <SportvirtuelP></SportvirtuelP>
+      <FooterP></FooterP>
+    </>
   );
 }
 
