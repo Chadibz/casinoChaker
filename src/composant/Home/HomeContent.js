@@ -1,84 +1,49 @@
 import "./HomeContent.css";
+import Icon from "./Icon";
+import Landing from "./Landing";
+import SliderGame from "./SliderGame/SliderGame";
+import SliderGamerest from "./SliderGame/SliderGamerest";
 function HomeContent() {
   return (
     <div class="tl_container">
       <div class="tl_landing_nav_big_wrapper flex_wrap_breakpoint" id="">
-        <a href="/sport" class="tl_landing_nav_big">
-          <img src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/sport.svg" />
-          <p class="nav_title">Sport</p>
-        </a>
-        <a href="/Sport/Live" class="tl_landing_nav_big">
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/live.svg"
-            alt="Pari Direct"
-          />
-          <p class="nav_title">Pari Direct</p>
-        </a>
-        <a href="/fr/Lobby/Casino/Main" class="tl_landing_nav_big">
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/cs_image.svg"
-            alt="Jeux"
-          />
-          <p class="nav_title">Jeux</p>
-        </a>
-        <a href="/fr/Lobby/Livecasino/Main" class="tl_landing_nav_big">
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/cs_live_image.svg"
-            alt="Live Casino"
-          />
-          <p class="nav_title">Live Casino</p>
-        </a>
-        <a href="/fr/GetSpecificGames?url=Lucky7" class="tl_landing_nav_big">
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/tv_games.svg"
-            alt="TV Games"
-          />
-          <p class="nav_title">TV Games</p>
-        </a>
-        <a
-          href="/fr/GetSpecificGames?url=zeppelin-betsolutions"
-          class="tl_landing_nav_big"
-        >
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/zepellin.svg"
-            alt="Zepellin"
-          />
-          <p class="nav_title">Zepellin</p>
-        </a>
-        <a href="/Login/Login" class=" tl_landing_nav_big openLogin">
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/monopoly.svg"
-            alt="Monopoly"
-          />
-          <p class="nav_title">Monopoly</p>
-        </a>
-        <a href="/Login/Login" class=" tl_landing_nav_big openLogin">
-          <img
-            src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/crazy_time.svg"
-            alt="Crazy Time"
-          />
-          <p class="nav_title">Crazy Time</p>
-        </a>
+        <Icon
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/sport.svg"
+          url="/sport"
+          name="sport"
+        ></Icon>
+        <Icon
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/sport.svg"
+          url="/sport"
+          name="sport"
+        ></Icon>
+        <Icon
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/sport.svg"
+          url="/sport"
+          name="sport"
+        ></Icon>
+        <Icon
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banners/sport.svg"
+          url="/sport"
+          name="sport"
+        ></Icon>
       </div>
       <div
         class="relative tl_landing_nav_big_wrapper flex_wrap_breakpoint"
         id="MiddleBanners"
       >
-        <a class="tl_landing_banner" href="/casino" target="_blank">
-          <div>
-            <img src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/mid/juex.png" />
-          </div>
-        </a>
-        <a class="tl_landing_banner" href="/sport" target="_blank">
-          <div>
-            <img src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/mid/middle sport.png" />
-          </div>
-        </a>
-        <a class="tl_landing_banner" href="/sport" target="_blank">
-          <div>
-            <img src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/mid/516_302_cashout.png" />
-          </div>
-        </a>
+        <Landing
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/mid/juex.png"
+          url="/casino"
+        ></Landing>
+        <Landing
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/mid/juex.png"
+          url="/casino"
+        ></Landing>{" "}
+        <Landing
+          img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/mid/juex.png"
+          url="/casino"
+        ></Landing>
       </div>
 
       <div class="top_cas_games__slider_block">
@@ -117,126 +82,45 @@ function HomeContent() {
                 style={{ width: "1206px" }}
               >
                 <div class="tl_games_slider_page">
-                  <div class="tl_games_slider_page_banner">
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/endorphina/cupid.gif"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                  </div>
+                  <SliderGame
+                    size="2"
+                    url="/casino"
+                    img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/endorphina/cupid.gif"
+                  ></SliderGame>
+
                   <div class="tl_games_slider_page_rest">
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/john-hunter-and-the-mayan-gods.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/madame-destiny-megaways.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/sweet-bonanza.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/buffalo-king.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/endorphina/sushi.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/booongo/great-panda.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
-                    <a
-                      class="tl_games_slider_game"
-                      href="/casino"
-                      target="_blank"
-                      tabindex="0"
-                    >
-                      <div>
-                        <img
-                          src="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/booongo/sun-of-egypt.jpg"
-                          style={{ opacity: "1" }}
-                        />
-                      </div>
-                    </a>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
+                    <SliderGamerest
+                      url="/casino"
+                      img="https://cdn-plat.apidigi.com/plat/prd/Img/Partners/1129/games/pragmatic/bronco-spirit.jpg"
+                    ></SliderGamerest>
                   </div>
                 </div>
               </div>

@@ -1,11 +1,18 @@
-function GameItem2({ size, id, img, name, extra, cat, like }) {
+function GameItem({ size, id, img, name, extra, cat, like }) {
   return (
     <div
-      class="lca-card js_dl_games_cont  slick-slide"
+      class={
+        "lca-card js_dl_games_cont " +
+        (size === "3"
+          ? "slick-slide slick-current slick-active"
+          : size === "1"
+          ? "lca-card-h2"
+          : size === "2"
+          ? "lca-card-w2"
+          : "")
+      }
       data-game-id={id}
-      data-slick-index="6"
-      style={{ opacity: "1 ", width: "302px" }}
-      aria-hidden="true"
+      style={{ opacity: "1" }}
     >
       <div class="lca-card-body">
         <img class="w-100 lca-card-img animated" src={img} alt="" />
@@ -22,14 +29,14 @@ function GameItem2({ size, id, img, name, extra, cat, like }) {
         <div class="lca-card-btn-wrapper d-flex align-items-center justify-content-center flexCol">
           <a
             class="h-bg-primary game__link_real js_dl_play"
-            data-href="/fr/Play/Real/Sweet-Bonanza-PragmaticPlay-Casino"
+            data-href="/fr/Play/Real/Queenie-Pragmatic-Casino"
           >
             {" "}
             Jouer
-          </a>{" "}
+          </a>
           <a
             class="h-bg-secondary game__link_demo js_dl_play_demo"
-            href="/fr/play/fun/Sweet-Bonanza-PragmaticPlay-Casino"
+            href="/fr/play/fun/Queenie-Pragmatic-Casino"
           >
             Démo Play
           </a>
@@ -49,4 +56,4 @@ function GameItem2({ size, id, img, name, extra, cat, like }) {
     </div>
   );
 }
-export default GameItem2;
+export default GameItem;

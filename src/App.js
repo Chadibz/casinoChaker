@@ -27,12 +27,13 @@ import Inbox from "./composant/Account/Inbox";
 import MonCompte from "./composant/Account/MonCompte";
 import BetHistory from "./composant/Account/BetHistory";
 import Bonus from "./composant/Account/Bonus";
+import AccountFix from "./composant/Account/AccountFix";
 function App() {
   return (
     <BrowserRouter>
       <HeaderP></HeaderP>
       <SubHeader></SubHeader>
-
+      <AccountFix></AccountFix>
       <Routes>
         <Route path="/" element={<HomeP></HomeP>}></Route>
         <Route path="/Casino" element={<JeuxP></JeuxP>}></Route>

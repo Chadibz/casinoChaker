@@ -1,3 +1,5 @@
+import SlickItem from "../general/SlickItem";
+
 function BannerP() {
   return (
     <div id="bannersCont" class="casino__top_banner">
@@ -22,28 +24,11 @@ function BannerP() {
               transform: "translate3d(-1263px, 0px, 0px)",
             }}
           >
-            <div
-              class="casino_backgr__slider_item slick-slide slick-cloned"
-              data-slidenumber="3"
-              data-slick-index="-1"
-              aria-hidden="true"
-              tabindex="-1"
-              style={{ width: "1263px" }}
-            >
-              <a
-                class="casino_backgr__image_block"
-                href="/casino"
-                target="_blank"
-                tabindex="-1"
-              >
-                <img
-                  src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/top/amatic web.png"
-                  title=""
-                  style={{ opacity: "1" }}
-                />
-                <div class="carousel_caption"></div>
-              </a>
-            </div>
+            <SlickItem
+              img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2022/Fertoona bet TOP Web.png"
+              url="/casino"
+            ></SlickItem>
+
             <div
               class="casino_backgr__slider_item slick-slide slick-current slick-active"
               data-slidenumber="0"
@@ -116,94 +101,6 @@ function BannerP() {
               aria-hidden="true"
               style={{ width: "1263px" }}
               tabindex="-1"
-            >
-              <a
-                class="casino_backgr__image_block"
-                href="/casino"
-                target="_blank"
-                tabindex="-1"
-              >
-                <img
-                  src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/top/amatic web.png"
-                  title=""
-                  style={{ opacity: "1" }}
-                />
-                <div class="carousel_caption"></div>
-              </a>
-            </div>
-            <div
-              class="casino_backgr__slider_item slick-slide slick-cloned"
-              data-slidenumber="0"
-              data-slick-index="4"
-              aria-hidden="true"
-              tabindex="-1"
-              style={{ width: "1263px" }}
-            >
-              <a
-                class="casino_backgr__image_block"
-                href="https://www.fertoonabet.tn/fr/Lobby/Casino/Main/Pragmatictournament/All"
-                target="_self"
-                tabindex="-1"
-              >
-                <img
-                  src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2022/Fertoona bet TOP Web.png"
-                  title=""
-                  style={{ opacity: "1" }}
-                />
-                <div class="carousel_caption"></div>
-              </a>
-            </div>
-            <div
-              class="casino_backgr__slider_item slick-slide slick-cloned"
-              data-slidenumber="1"
-              data-slick-index="5"
-              aria-hidden="true"
-              tabindex="-1"
-              style={{ width: "1263px" }}
-            >
-              <a
-                class="casino_backgr__image_block"
-                href="/casino"
-                target="_blank"
-                tabindex="-1"
-              >
-                <img
-                  src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/top/sans-titre---4.gif"
-                  title=""
-                  style={{ opacity: "1" }}
-                />
-                <div class="carousel_caption"></div>
-              </a>
-            </div>
-            <div
-              class="casino_backgr__slider_item slick-slide slick-cloned"
-              data-slidenumber="2"
-              data-slick-index="6"
-              aria-hidden="true"
-              tabindex="-1"
-              style={{ width: "1263px" }}
-            >
-              <a
-                class="casino_backgr__image_block"
-                href="/Betongames?url=Crash"
-                target="_blank"
-                tabindex="-1"
-              >
-                <img
-                  src="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021 new skin/top/1920_1008_crash.png"
-                  title=""
-                  style={{ opacity: "1" }}
-                />
-                <div class="carousel_caption"></div>
-              </a>
-            </div>
-            <div
-              class="casino_backgr__slider_item slick-slide slick-cloned"
-              data-slidenumber="3"
-              data-slick-index="7"
-              aria-hidden="true"
-              tabindex="-1"
-              style={{ width: "1263px" }}
             >
               <a
                 class="casino_backgr__image_block"
