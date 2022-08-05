@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 function HeaderP() {
   return (
     <div id="header_fix" class="tl_header_top_row">
       <div class="tl_header_top_row_fix flex">
         <div class="tl_logo ">
-          <a
-            href="/"
+          <Link
+            to="/"
             style={{
               backgroundImage:
                 "url(https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/logo.svg)",
             }}
-          ></a>
+          ></Link>
         </div>
         <div class="tl_time flex">
           <span class="time">14:13:34</span>
