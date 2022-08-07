@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BetHistory from "./BetHistory";
 import Bonus from "./Bonus";
+import OutsideClickHandler from "react-outside-click-handler";
+
+import Transaction from "./Transaction";
+import { render } from "@testing-library/react";
+import MonCompte from "./MonCompte";
 
 function AccountFix() {
-  const [buttonPopup, setButtonPopup] = useState(false);
+  const [buttonP, setButton] = useState("MonCompte");
+
+  const ConditionalView = (buttonP) => {
+    if (buttonP === "Transaction") {
+      return <Transaction></Transaction>;
+    }
+    if (buttonP === "Bonus") {
+      return <Bonus></Bonus>;
+    }
+    if (buttonP === "BetHistory") {
+      return <BetHistory></BetHistory>;
+    }
+    if (buttonP === "MonCompte") {
+      return <MonCompte></MonCompte>;
+    }
+  };
+
   return (
     <div
       tabindex="-1"
@@ -36,7 +57,6 @@ function AccountFix() {
         </span>
 
         <button
-          onClick={() => setButtonPopup(true)}
           type="button"
           class="ui-dialog-titlebar-close"
           style={{ display: "none" }}
@@ -55,6 +75,7 @@ function AccountFix() {
       >
         <div class="tl_my_acc_cont_nav">
           <a
+            onClick={() => setButton("MonCompte")}
             class="tl_my_acc_nav_item active"
             data-href="/fr/Account/Profile1129"
             id="profile_tab"
@@ -62,7 +83,7 @@ function AccountFix() {
             Mon compte
           </a>
           <a
-            onClick={() => setButtonPopup(true)}
+            onClick={() => setButton("BetHistory")}
             class="tl_my_acc_nav_item"
             data-href="/fr/Account/GameHistory"
             id="history_tab"
@@ -73,7 +94,7 @@ function AccountFix() {
             Histoire des paris sportifs
           </a>
           <a
-            onClick={() => setButtonPopup(true)}
+            onClick={() => setButton("Bonus")}
             class="tl_my_acc_nav_item"
             data-href="/fr/Bonus/ClientBonusReport"
             id="bonuses_tab"
@@ -81,6 +102,7 @@ function AccountFix() {
             Bonus
           </a>
           <a
+            onClick={() => setButton("Transaction")}
             class="tl_my_acc_nav_item"
             data-href="/fr/Account/TransactionsHistory?typeTransac=2"
             id="transactions_tab"
@@ -88,8 +110,8 @@ function AccountFix() {
             Transactions
           </a>
         </div>
-        <Bonus trigger={buttonPopup}></Bonus>
-        <BetHistory trigger={buttonPopup}></BetHistory>
+
+        {ConditionalView(buttonP)}
       </div>
     </div>
   );

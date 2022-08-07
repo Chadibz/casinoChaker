@@ -1,5 +1,5 @@
-function Bonus(props) {
-  return props.trigger ? (
+function Bonus() {
+  return (
     <div class="tl_my_acc_cont_content tl_popup_clr">
       <div class="tl_head_close dont-shrink tl_my_acc_close"></div>
       <div id="tl_scroll" class="profile_popup_content scrolled__content">
@@ -103,8 +103,6 @@ function Bonus(props) {
         </div>
       </div>
     </div>
-  ) : (
-    ""
   );
 }
 export default Bonus;
