@@ -33,11 +33,15 @@ function App() {
     <BrowserRouter>
       <HeaderP></HeaderP>
       <SubHeader></SubHeader>
-      <AccountFix></AccountFix>
+
       <Routes>
         <Route path="/" element={<HomeP></HomeP>}></Route>
         <Route path="/Casino" element={<JeuxP></JeuxP>}></Route>
         <Route path="/LiveCasino" element={<LiveCasinoP></LiveCasinoP>}></Route>
+        <Route
+          path="/Virtualsports"
+          element={<SportvirtuelP></SportvirtuelP>}
+        ></Route>
         <Route path="/Sport"></Route>
         <Route path="/"></Route>
       </Routes>

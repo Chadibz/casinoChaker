@@ -1,5 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Login from "../Account/Login";
 function HeaderP() {
+  const [LoginV, setLogin] = useState(false);
+  let time = new Date().toLocaleTimeString();
+  const [Ctime, setCime] = useState(time);
+  const UpdateTime = () => {
+    time = new Date().toLocaleTimeString();
+    setCime(time);
+  };
+  setInterval(UpdateTime, 1000);
+
   return (
     <div id="header_fix" class="tl_header_top_row">
       <div class="tl_header_top_row_fix flex">
@@ -13,7 +24,7 @@ function HeaderP() {
           ></Link>
         </div>
         <div class="tl_time flex">
-          <span class="time">14:13:34</span>
+          <span class="time">{Ctime}</span>
           <span class="zone">GMT+1</span>
         </div>
         <div class="tl_head_promos flex">
@@ -64,6 +75,7 @@ function HeaderP() {
         <div class="tl_login_container flex">
           <div class="tl_logged_out flex">
             <a
+              onClick={() => setLogin(true)}
               class="loginDialog tl_login_button ternBtn transBg"
               data-dialog-title="Login"
               data-href="/Login/Login"
@@ -123,6 +135,7 @@ function HeaderP() {
           </div>
         </div>
       </div>
+      <Login Trigger={LoginV} setTrigger={setLogin}></Login>
     </div>
   );
 }

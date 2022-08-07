@@ -1,5 +1,6 @@
-function Login() {
-  return (
+import React from "react";
+function Login(props) {
+  return props.Trigger ? (
     <div
       tabindex="-1"
       role="dialog"
@@ -43,7 +44,11 @@ function Login() {
             <div class="tl_popup_header" style={{}}>
               <span class="tl_head_text">S'identifier</span>
 
-              <i class="tl_head_close dont-shrink"></i>
+              <i
+                onClick={() => props.setTrigger(false)}
+                class="tl_head_close dont-shrink"
+              ></i>
+              {props.children}
             </div>
             <div id="login_container">
               <div class="tl_popup_content">
@@ -132,6 +137,8 @@ function Login() {
         </div>
       </div>
     </div>
+  ) : (
+    ""
   );
 }
 export default Login;
