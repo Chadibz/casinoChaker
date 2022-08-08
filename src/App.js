@@ -28,13 +28,17 @@ import MonCompte from "./composant/Account/MonCompte";
 import BetHistory from "./composant/Account/BetHistory";
 import Bonus from "./composant/Account/Bonus";
 import AccountFix from "./composant/Account/AccountFix";
+import Langues from "./composant/Header/Langues";
+import Promotion from "./composant/Promotion/Promotion";
 function App() {
   return (
     <BrowserRouter>
       <HeaderP></HeaderP>
+
       <SubHeader></SubHeader>
 
       <Routes>
+        <Route path="/Promotions" element={<Promotion></Promotion>}></Route>
         <Route path="/" element={<HomeP></HomeP>}></Route>
         <Route path="/Casino" element={<JeuxP></JeuxP>}></Route>
         <Route path="/LiveCasino" element={<LiveCasinoP></LiveCasinoP>}></Route>

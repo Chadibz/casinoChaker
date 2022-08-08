@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Login from "../Account/Login";
+import Langues from "./Langues";
+import OutsideClickHandler from "react-outside-click-handler";
 function HeaderP() {
+  const [LangueV, setLangue] = useState(false);
   const [LoginV, setLogin] = useState(false);
   let time = new Date().toLocaleTimeString();
   const [Ctime, setCime] = useState(time);
@@ -83,55 +86,37 @@ function HeaderP() {
             >
               SE CONNECTER
             </a>
-
-            <div class="tl_drop_down tl_acc_lang d-flex tl_btn ternBtn">
-              <a
-                class="d-flex header__dropdown-menu align-items-center"
-                href="#"
-                data-toggle="dropdown"
-              >
-                <span class="flex-shrink-0 langTxt langCode">fr</span>
-                <span class="flex-shrink-0 langTxt footerLangtxt">
-                  Français
-                </span>
-                <span
-                  class="flex-shrink-0 lang fr"
-                  style={{
-                    backgroundImage:
-                      "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
-                  }}
-                ></span>
-
-                <i class="dynamic_icon dynamic_icon-arrow"></i>
-              </a>
+            <OutsideClickHandler
+              onOutsideClick={() => {
+                setLangue(false);
+              }}
+            >
               <div
-                class="links_container scrolled__content"
-                id="LanguageBarSorting"
+                onClick={() => setLangue(!LangueV)}
+                class="tl_drop_down tl_acc_lang d-flex tl_btn ternBtn"
               >
-                <a class="tl_dropdown_style d-flex px-1 en" href="/en/ ">
-                  <span class="flex-grow-1 text-truncate text-left">
-                    English
+                <a
+                  class="d-flex header__dropdown-menu align-items-center"
+                  href="#"
+                  data-toggle="dropdown"
+                >
+                  <span class="flex-shrink-0 langTxt langCode">fr</span>
+                  <span class="flex-shrink-0 langTxt footerLangtxt">
+                    Français
                   </span>
                   <span
-                    class="flex-shrink-0 lang en"
+                    class="flex-shrink-0 lang fr"
                     style={{
                       backgroundImage:
                         "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
                     }}
                   ></span>
+
+                  <i class="dynamic_icon dynamic_icon-arrow"></i>
                 </a>
-                <a class="tl_dropdown_style d-flex px-1 aeb" href="/aeb/ ">
-                  <span class="flex-grow-1 text-truncate text-left">تونسي</span>
-                  <span
-                    class="flex-shrink-0 lang aeb"
-                    style={{
-                      backgroundImage:
-                        "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
-                    }}
-                  ></span>
-                </a>
+                {LangueV && <Langues></Langues>}
               </div>
-            </div>
+            </OutsideClickHandler>
           </div>
         </div>
       </div>
