@@ -25,10 +25,13 @@ function BannerP() {
             }}
           >
             <SlickItem
-              img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2022/Fertoona bet TOP Web.png"
-              url="/casino"
+              img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021%20new%20skin/top/1920_1008_crash.png"
+              url="/scasino"
             ></SlickItem>
-
+            <SlickItem
+              img="https://cdn-plat.apidigi.com/plat/prd/Img/partners/1129/banner/2021%20new%20skin/top/1920_1008_crash.png"
+              url="/scasino"
+            ></SlickItem>
             <div
               class="casino_backgr__slider_item slick-slide slick-current slick-active"
               data-slidenumber="0"
