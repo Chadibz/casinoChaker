@@ -1,5 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../../features/userSlices";
 function Login(props) {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(
+      login({
+        name: name,
+        password: password,
+        loggedIn: true,
+      })
+    );
+  };
+
   return props.Trigger ? (
     <div
       tabindex="-1"
@@ -35,12 +51,8 @@ function Login(props) {
             id="loginForm"
             method="post"
             novalidate="novalidate"
+            onSubmit={(e) => handleSubmit(e)}
           >
-            <input
-              name="__RequestVerificationToken"
-              type="hidden"
-              value="wwZCo2toRWc9wefMh3EogEfF9hRkVAnXJY79Zb1xWDh85vHBe5YYYQbqq720e-Un_rK-Jsu352412GfDKHsNR-cuRJS-Lc-ITom5zm2vymA1"
-            />{" "}
             <div class="tl_popup_header" style={{}}>
               <span class="tl_head_text">S'identifier</span>
 
@@ -64,10 +76,11 @@ function Login(props) {
                     data-val="true"
                     data-val-required="Please enter your username"
                     id="email"
-                    name="Email"
+                    name="name"
+                    type="name"
                     placeholder="Nom d’utilisateur"
-                    type="text"
-                    value=""
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <span
                     class="field-validation-valid reg_err_mess"
@@ -89,8 +102,10 @@ function Login(props) {
                       data-val-required="Password field is required"
                       id="password"
                       name="Password"
-                      placeholder="Mot de passe"
+                      placeholder="Password"
                       type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
 
                     <span
@@ -113,7 +128,7 @@ function Login(props) {
 
                 <div class="mb-1 login_form_group text-center ">
                   <button
-                    type="button"
+                    type="submit"
                     class="tl_btn login_btn btnSec h-bg-primary"
                     automation="login_button"
                   >

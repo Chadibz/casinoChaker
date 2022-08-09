@@ -30,6 +30,7 @@ import Bonus from "./composant/Account/Bonus";
 import AccountFix from "./composant/Account/AccountFix";
 import Langues from "./composant/Header/Langues";
 import Promotion from "./composant/Promotion/Promotion";
+
 function App() {
   return (
     <BrowserRouter>

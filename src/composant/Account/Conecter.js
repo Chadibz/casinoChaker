@@ -1,20 +1,31 @@
+import { useState } from "react";
+import Langues from "../Header/Langues";
+import OutsideClickHandler from "react-outside-click-handler";
+import AccountFix from "./AccountFix";
+import Inbox from "./Inbox";
+
 function Conecter() {
+  const [LangueV, setLangue] = useState(false);
+  const [Compte, setCompte] = useState(false);
+  const [Inbox, setInbox] = useState(false);
   return (
     <div class="tl_login_container flex">
       <div class="tl_logged_in flex">
         <a
+          onClick={() => setCompte(true)}
           class="transactionsDialog tl_deposit_button primBtn transBg"
           data-href="/Account/TransactionsHistory"
         >
           Transactions
         </a>
 
-        <a
+        <button
+          onClick={() => setInbox(true)}
           data-href="/fr/Account/Inbox"
           class="tl_deposit_mail inboxDialog tern transBg transferDropdown"
         >
           <i class="tf_mail_icon dropdownColor"></i>
-        </a>
+        </button>
 
         <div
           id="bonusBalanceCont"
@@ -92,52 +103,39 @@ function Conecter() {
           </div>
         </div>
 
-        <div class="tl_drop_down tl_acc_lang d-flex tl_btn ternBtn">
-          <a
-            class="d-flex header__dropdown-menu align-items-center"
-            href="#"
-            data-toggle="dropdown"
-          >
-            <span class="flex-shrink-0 langTxt langCode">fr</span>
-            <span class="flex-shrink-0 langTxt footerLangtxt">Français</span>
-            <span
-              class="flex-shrink-0 lang fr"
-              style={{
-                backgroundImage:
-                  "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
-              }}
-            ></span>
-
-            <i class="dynamic_icon dynamic_icon-arrow"></i>
-          </a>
+        <OutsideClickHandler
+          onOutsideClick={() => {
+            setLangue(false);
+          }}
+        >
           <div
-            class="links_container scrolled__content"
-            id="LanguageBarSorting"
-            style={{ display: "none" }}
+            onClick={() => setLangue(!LangueV)}
+            class="tl_drop_down tl_acc_lang d-flex tl_btn ternBtn"
           >
-            <a class="tl_dropdown_style d-flex px-1 aeb" href="/aeb/ ">
-              <span class="flex-grow-1 text-truncate text-left">تونسي</span>
+            <i
+              class="d-flex header__dropdown-menu align-items-center"
+              href="#"
+              data-toggle="dropdown"
+            >
+              <span class="flex-shrink-0 langTxt langCode">fr</span>
+              <span class="flex-shrink-0 langTxt footerLangtxt">Français</span>
               <span
-                class="flex-shrink-0 lang aeb"
+                class="flex-shrink-0 lang fr"
                 style={{
                   backgroundImage:
                     "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
                 }}
               ></span>
-            </a>
-            <a class="tl_dropdown_style d-flex px-1 en" href="/en/ ">
-              <span class="flex-grow-1 text-truncate text-left">English</span>
-              <span
-                class="flex-shrink-0 lang en"
-                style={{
-                  backgroundImage:
-                    "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
-                }}
-              ></span>
-            </a>
+
+              <i class="dynamic_icon dynamic_icon-arrow"></i>
+            </i>
+            {LangueV && <Langues></Langues>}
           </div>
-        </div>
+        </OutsideClickHandler>
       </div>
+
+      <AccountFix Trigger={Compte} setTrigger={setCompte}></AccountFix>
+      {Inbox && <Inbox></Inbox>}
     </div>
   );
 }
