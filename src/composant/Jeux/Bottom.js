@@ -1,8 +1,24 @@
+import { useBottomScrollListener } from "react-bottom-scroll-listener";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  SET_CASINO_ADD_MORE,
+  UPDATE_LAST_PAGE,
+} from "../../redux/actions/types";
 import FilterCasino from "./FilterCasino";
 import GameItem from "./GameItem";
 import GameItem2 from "./GameItem2";
 
 function Bottom() {
+  const dispatch = useDispatch();
+  const { games, filter_provider, searchtext, lastpageloading } = useSelector(
+    (state) => state.Games
+  );
+  useBottomScrollListener(() => loadMore(), {
+    offset: 300,
+  });
+  const loadMore = () => {
+    dispatch({ type: UPDATE_LAST_PAGE });
+  };
   return (
     <div class="lca-main-wrapper lca-wrapper  no_card_footer">
       <div class="js_lobby_groups_cont">
@@ -90,51 +106,30 @@ function Bottom() {
       </div>
       <FilterCasino />
       <div class="lca-games-grid grid_2" id="js_games_lobby">
-        <GameItem
-          size="0"
-          id="28462"
-          img="https://cdn-plat.apidigi.com/plat/prd/Img/Games/Pragmatic/Vertical/28462_SugarRush.jpg"
-          name="Sugar Rush"
-          extra=""
-          cat="Top"
-          like="123"
-        ></GameItem>
-        <GameItem
-          size="1"
-          id="28462"
-          img="https://cdn-plat.apidigi.com/plat/prd/Img/Games/Pragmatic/Vertical/28462_SugarRush.jpg"
-          name="Sugar Rush"
-          extra=""
-          cat="Top"
-          like="123"
-        ></GameItem>
-        <GameItem
-          size="2"
-          id="28462"
-          img="https://cdn-plat.apidigi.com/plat/prd/Img/Games/Pragmatic/Vertical/28462_SugarRush.jpg"
-          name="Sugar Rush"
-          extra=""
-          cat="Top"
-          like="123"
-        ></GameItem>
-        <GameItem
-          size="1"
-          id="28462"
-          img="https://cdn-plat.apidigi.com/plat/prd/Img/Games/Pragmatic/Vertical/28462_SugarRush.jpg"
-          name="Sugar Rush"
-          extra=""
-          cat="Top"
-          like="123"
-        ></GameItem>
-        <GameItem
-          size="1"
-          id="28462"
-          img="https://cdn-plat.apidigi.com/plat/prd/Img/Games/Pragmatic/Vertical/28462_SugarRush.jpg"
-          name="Sugar Rush"
-          extra=""
-          cat="Top"
-          like="123"
-        ></GameItem>
+        {games
+          .filter((a) => a.cat != 5)
+          .filter(
+            (b) =>
+              b.lib.toUpperCase().includes(searchtext.toUpperCase()) ||
+              searchtext === ""
+          )
+          .filter(
+            (b) =>
+              filter_provider.includes(b.idprov) || filter_provider.length === 0
+          )
+          .sort((a, b) => (a.index < b.index ? 1 : -1))
+          .slice(0, (lastpageloading + 1) * 40)
+          .map((item) => (
+            <GameItem
+              size="0"
+              id={item.id}
+              img={item.url}
+              name={item.lib}
+              extra=""
+              cat="Top"
+              like="123"
+            ></GameItem>
+          ))}
       </div>
     </div>
   );

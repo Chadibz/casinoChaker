@@ -1,7 +1,6 @@
 function MonCompte() {
   return (
     <div class="tl_my_acc_cont_content tl_popup_clr">
-      <div class="tl_head_close dont-shrink tl_my_acc_close"></div>
       <div id="tl_scroll" class="profile_popup_content scrolled__content">
         <div id="tl_profile_content" style={{ display: "block" }}>
           <div id="my_prof">

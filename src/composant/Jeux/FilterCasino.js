@@ -1,4 +1,19 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  CLEAR_CASINO_PROV_FILT,
+  PUT_CASINO_PROV_FILT,
+  PUT_CASINO_SEARCH_FILT,
+} from "../../redux/actions/types";
+
 function FilterCasino() {
+  const { searchtext, filter_provider } = useSelector((state) => state.Games);
+  const { providers_Casino } = useSelector((state) => state.Providers);
+  const [opendprovider, setopendpprovider] = useState(false);
+  const dispatch = useDispatch();
+  const searchchange = (e) => {
+    dispatch({ type: PUT_CASINO_SEARCH_FILT, payload: e.target.value });
+  };
   return (
     <div id="js_dl_filter_block">
       <div class="lca-navbar  d-flex align-items-center ">
@@ -174,7 +189,9 @@ function FilterCasino() {
             class="lca-search-input"
             type="text"
             placeholder="Search"
+            value={searchtext}
             id="js_dl_search_game"
+            onChange={(e) => searchchange(e)}
           />
         </div>
       </div>
@@ -331,469 +348,70 @@ function FilterCasino() {
           </div>
         </div>
       </div>
-      <div class="lca-submenu-row  " id="js_provs_nav_shadow">
+      <div
+        class={opendprovider ? "lca-submenu-row  " : "lca-submenu-row closed"}
+        id="js_provs_nav_shadow"
+      >
         <ul
           class="lca-submenu lca-submenu-dropdown"
           id="js_lobby_prov_nav_list_view"
         >
-          <li class="lca-submenu-item list-inline-item">
+          <li
+            class="lca-submenu-item list-inline-item"
+            onClick={() => dispatch({ type: CLEAR_CASINO_PROV_FILT })}
+          >
             <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14378"
-              data-url="amatic"
+              class={
+                filter_provider.length === 0
+                  ? "js_dl_categories lca-submenu-link badge_None active"
+                  : "js_dl_categories lca-submenu-link badge_None "
+              }
+              data-id="0"
+              data-url="All"
             >
-              <span> Amatic </span>
+              <span> {"All"} </span>
               <span class="js_dl_cat_count">
                 {" "}
-                <span class="lca-line">|</span> 59
+                <span class="lca-line">|</span>
+                {9}
               </span>
             </a>
           </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14308"
-              data-url="pragmaticplay"
-            >
-              <span> Pragmatic Play </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 248
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14309"
-              data-url="endorphina"
-            >
-              <span> Endorphina </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 101
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14290"
-              data-url="playson"
-            >
-              <span> Playson </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 57
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14283"
-              data-url="booongo"
-            >
-              <span> Booongo </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 53
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14310"
-              data-url="wazdan"
-            >
-              <span> Wazdan </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 159
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14293"
-              data-url="boominggames"
-            >
-              <span> Booming Games </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 91
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14287"
-              data-url="belatra"
-            >
-              <span> Belatra </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 80
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14306"
-              data-url="ortiz"
-            >
-              <span> Ortiz </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 16
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14289"
-              data-url="evoplayentertainment"
-            >
-              <span> Evoplay Entertainment </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 155
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14299"
-              data-url="fazi"
-            >
-              <span> Fazi </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 104
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14297"
-              data-url="onetouch"
-            >
-              <span> OneTouch </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 49
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14311"
-              data-url="mrslotty"
-            >
-              <span> MrSlotty </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 49
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14300"
-              data-url="wearecasino"
-            >
-              <span> WeAreCasino </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 21
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="25649"
-              data-url="gameart"
-            >
-              <span> GameArt </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 108
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14301"
-              data-url="conceptgaming"
-            >
-              <span> Concept Gaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 51
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14281"
-              data-url="fugaso"
-            >
-              <span> Fugaso </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 34
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14291"
-              data-url="redrake"
-            >
-              <span> Red Rake </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 75
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14298"
-              data-url="worldmatch"
-            >
-              <span> WorldMatch </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 166
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14294"
-              data-url="superlotto"
-            >
-              <span> SuperLotto </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 52
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14302"
-              data-url="gmw"
-            >
-              <span> GMW </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 40
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14288"
-              data-url="inbet"
-            >
-              <span> Inbet </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 231
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14292"
-              data-url="tomhorn"
-            >
-              <span> Tom Horn </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 48
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14296"
-              data-url="spadegaming"
-            >
-              <span> SpadeGaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 101
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14328"
-              data-url="betsolutions"
-            >
-              <span> Betsolutions </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 9
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14304"
-              data-url="espressogames"
-            >
-              <span> Espresso Games </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 60
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14307"
-              data-url="njoy"
-            >
-              <span> NJOY </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 10
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14303"
-              data-url="gamefishglobal"
-            >
-              <span> GameFishGlobal </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 8
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14284"
-              data-url="xgaming"
-            >
-              <span> 1x2gaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 94
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14285"
-              data-url="irondog"
-            >
-              <span> Iron Dog </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 41
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14286"
-              data-url="oryx"
-            >
-              <span> ORYX </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 6
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14324"
-              data-url="leapgaming"
-            >
-              <span> Leap Gaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 18
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14305"
-              data-url="kagaming"
-            >
-              <span> Ka Gaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 399
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14282"
-              data-url="habanero"
-            >
-              <span> Habanero </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 194
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="14325"
-              data-url="nucleusgaming"
-            >
-              <span> Nucleus Gaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 96
-              </span>
-            </a>
-          </li>
+          {providers_Casino
+            .filter((a) => a.iscasino === 1)
+            .map((item) => (
+              <li
+                class="lca-submenu-item list-inline-item"
+                onClick={() =>
+                  dispatch({ type: PUT_CASINO_PROV_FILT, payload: item.id })
+                }
+              >
+                <a
+                  class={
+                    filter_provider.includes(item.id)
+                      ? "js_dl_categories lca-submenu-link badge_None active"
+                      : "js_dl_categories lca-submenu-link badge_None "
+                  }
+                  data-id="14378"
+                  data-url="amatic"
+                >
+                  <span> {item.lib} </span>
+                  <span class="js_dl_cat_count">
+                    {" "}
+                    <span class="lca-line">|</span>
+                    {item.count_game}
+                  </span>
+                </a>
+              </li>
+            ))}
         </ul>
         <div
-          class="lca-submenu-dropdown-toggler lca-nabvar-controller open"
+          onClick={() => setopendpprovider((s) => !s)}
+          class={
+            opendprovider
+              ? "lca-submenu-dropdown-toggler lca-nabvar-controller open"
+              : "lca-submenu-dropdown-toggler lca-nabvar-controller"
+          }
           id="js_open_prvs_btn"
         ></div>
       </div>

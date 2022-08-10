@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 function Inbox() {
   return (
     <div>
       <div
-        tabindex="-1"
         role="dialog"
         style={{
           height: "auto",

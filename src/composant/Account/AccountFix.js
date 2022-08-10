@@ -28,7 +28,7 @@ function AccountFix(props) {
   return props.Trigger ? (
     <div>
       <div
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         style={{
           height: "auto",
@@ -67,6 +67,7 @@ function AccountFix(props) {
             style={{ display: "none" }}
           ></button>
         </div>
+
         <div
           class="tl_my_acc_cont flex ui-dialog-content ui-widget-content resizedH resizedW"
           id="accountDialog"
@@ -115,8 +116,11 @@ function AccountFix(props) {
               Transactions
             </a>
           </div>
-
-          {ConditionalView(buttonP)}
+          {ConditionalView(buttonP)}{" "}
+          <div
+            onClick={() => props.setTrigger(false)}
+            class="tl_head_close dont-shrink tl_my_acc_close"
+          ></div>
         </div>
       </div>
     </div>

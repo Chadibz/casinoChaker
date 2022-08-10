@@ -1,20 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "../../features/userSlices";
 function Login(props) {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(
-      login({
-        name: name,
-        password: password,
-        loggedIn: true,
-      })
-    );
-  };
 
   return props.Trigger ? (
     <div
@@ -51,7 +40,6 @@ function Login(props) {
             id="loginForm"
             method="post"
             novalidate="novalidate"
-            onSubmit={(e) => handleSubmit(e)}
           >
             <div class="tl_popup_header" style={{}}>
               <span class="tl_head_text">S'identifier</span>

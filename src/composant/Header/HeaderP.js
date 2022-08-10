@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Login from "../Account/Login";
 import Langues from "./Langues";
 import OutsideClickHandler from "react-outside-click-handler";
-import { selectUser } from "../../features/userSlices";
-import { useSelector } from "react-redux";
 import Conecter from "../Account/Conecter";
 function HeaderP() {
   const [LangueV, setLangue] = useState(false);
@@ -16,7 +14,6 @@ function HeaderP() {
     setCime(time);
   };
   setInterval(UpdateTime, 1000);
-  const user = useSelector(selectUser);
 
   return (
     <div id="header_fix" class="tl_header_top_row">
@@ -79,7 +76,7 @@ function HeaderP() {
             target="_blank"
           ></a>
         </div>
-        {user ? (
+        {1 === 1 ? (
           <Conecter></Conecter>
         ) : (
           <div class="tl_login_container flex">

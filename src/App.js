@@ -23,15 +23,24 @@ import Login from "./composant/Account/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registre from "./composant/Account/Registre";
 import Transaction from "./composant/Account/Transaction";
-import Inbox from "./composant/Account/Inbox";
+
 import MonCompte from "./composant/Account/MonCompte";
 import BetHistory from "./composant/Account/BetHistory";
 import Bonus from "./composant/Account/Bonus";
 import AccountFix from "./composant/Account/AccountFix";
 import Langues from "./composant/Header/Langues";
 import Promotion from "./composant/Promotion/Promotion";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { InitGames } from "./redux/actions/Games";
+import { getinitcasino } from "./redux/actions/Providers";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(InitGames());
+    dispatch(getinitcasino());
+  }, []);
   return (
     <BrowserRouter>
       <HeaderP></HeaderP>
