@@ -1,6 +1,6 @@
 import Bottom from "./Bottom";
 import FilterBloc from "./FilterBloc";
-import Game from "./Game";
+
 import Slick from "./Slick";
 import Slider from "./Slick";
 import TopWinner from "./TopWinner";

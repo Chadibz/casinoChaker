@@ -76,54 +76,51 @@ function HeaderP() {
             target="_blank"
           ></a>
         </div>
-        {1 === 1 ? (
-          <Conecter></Conecter>
-        ) : (
-          <div class="tl_login_container flex">
-            <div class="tl_logged_out flex">
-              <a
-                onClick={() => setLogin(true)}
-                class="loginDialog tl_login_button ternBtn transBg"
-                data-dialog-title="Login"
-                data-href="/Login/Login"
-                automation="home_login_button"
-              >
-                SE CONNECTER
-              </a>
-              <OutsideClickHandler
-                onOutsideClick={() => {
-                  setLangue(false);
-                }}
-              >
-                <div
-                  onClick={() => setLangue(!LangueV)}
-                  class="tl_drop_down tl_acc_lang d-flex tl_btn ternBtn"
-                >
-                  <a
-                    class="d-flex header__dropdown-menu align-items-center"
-                    href="#"
-                    data-toggle="dropdown"
-                  >
-                    <span class="flex-shrink-0 langTxt langCode">fr</span>
-                    <span class="flex-shrink-0 langTxt footerLangtxt">
-                      Français
-                    </span>
-                    <span
-                      class="flex-shrink-0 lang fr"
-                      style={{
-                        backgroundImage:
-                          "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
-                      }}
-                    ></span>
 
-                    <i class="dynamic_icon dynamic_icon-arrow"></i>
-                  </a>
-                  {LangueV && <Langues></Langues>}
-                </div>
-              </OutsideClickHandler>
-            </div>
+        <div class="tl_login_container flex">
+          <div class="tl_logged_out flex">
+            <a
+              onClick={() => setLogin(true)}
+              class="loginDialog tl_login_button ternBtn transBg"
+              data-dialog-title="Login"
+              data-href="/Login/Login"
+              automation="home_login_button"
+            >
+              SE CONNECTER
+            </a>
+            <OutsideClickHandler
+              onOutsideClick={() => {
+                setLangue(false);
+              }}
+            >
+              <div
+                onClick={() => setLangue(!LangueV)}
+                class="tl_drop_down tl_acc_lang d-flex tl_btn ternBtn"
+              >
+                <a
+                  class="d-flex header__dropdown-menu align-items-center"
+                  href="#"
+                  data-toggle="dropdown"
+                >
+                  <span class="flex-shrink-0 langTxt langCode">fr</span>
+                  <span class="flex-shrink-0 langTxt footerLangtxt">
+                    Français
+                  </span>
+                  <span
+                    class="flex-shrink-0 lang fr"
+                    style={{
+                      backgroundImage:
+                        "url('https://cdn-plat.apidigi.com/plat/prd/Img/flags/mob_flags.png')",
+                    }}
+                  ></span>
+
+                  <i class="dynamic_icon dynamic_icon-arrow"></i>
+                </a>
+                {LangueV && <Langues></Langues>}
+              </div>
+            </OutsideClickHandler>
           </div>
-        )}
+        </div>
       </div>
       <Login Trigger={LoginV} setTrigger={setLogin}></Login>
     </div>

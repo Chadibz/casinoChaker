@@ -14,7 +14,7 @@ function GameItem({ size, id, img, name, extra, cat, like }) {
         <div class="lca-card-badge-wrapper animate"></div>
       </div>
       <div class="lca-card-footer d-flex">
-        <div class="lca-card-name flex-grow-1">Sweet Bonanza Candyland</div>
+        <div class="lca-card-name flex-grow-1">{name}</div>
         <div class="lca-card-price text-right">
           <span>{extra}</span>
           <span class="currency_icon tnd"></span>

@@ -1,5 +1,19 @@
 import FiltreItem from "../general/FiltreItem";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  CLEAR_CASINO_PROV_FILT,
+  PUT_CASINO_PROV_FILT,
+  PUT_CASINO_SEARCH_FILT,
+} from "../../redux/actions/types";
 function FilterBloc() {
+  const { searchtext, filter_provider } = useSelector((state) => state.Games);
+  const { providers_Casino } = useSelector((state) => state.Providers);
+  const [opendprovider, setopendpprovider] = useState(false);
+  const dispatch = useDispatch();
+  const searchchange = (e) => {
+    dispatch({ type: PUT_CASINO_SEARCH_FILT, payload: e.target.value });
+  };
   return (
     <div id="js_dl_filter_block">
       <div class="lca-navbar  d-flex align-items-center ">
@@ -121,6 +135,8 @@ function FilterBloc() {
             placeholder="Search"
             onkeyup="searchGames(this);"
             id="js_dl_search_game"
+            value={searchtext}
+            onChange={(e) => searchchange(e)}
           />
         </div>
       </div>
@@ -149,119 +165,70 @@ function FilterBloc() {
           </div>
         </div>
       </div>
-      <div class="lca-submenu-row  " id="js_provs_nav_shadow">
+      <div
+        class={opendprovider ? "lca-submenu-row  " : "lca-submenu-row closed"}
+        id="js_provs_nav_shadow"
+      >
         <ul
           class="lca-submenu lca-submenu-dropdown"
           id="js_lobby_prov_nav_list_view"
         >
-          <FiltreItem name="All" num="405"></FiltreItem>
-          <li class="lca-submenu-item list-inline-item">
+          <li
+            onClick={() => dispatch({ type: CLEAR_CASINO_PROV_FILT })}
+            class="lca-submenu-item list-inline-item"
+          >
             <a
-              class="js_dl_categories lca-submenu-link active"
+              class={
+                filter_provider.length === 0
+                  ? "js_dl_categories lca-submenu-link badge_None active"
+                  : "js_dl_categories lca-submenu-link badge_None "
+              }
               data-id="0"
               data-url="all"
             >
-              <span> All </span>
+              <span> {"All"} </span>
               <span class="js_dl_cat_count">
                 {" "}
-                <span class="lca-line">|</span> 405
+                <span class="lca-line">|</span> {9}
               </span>
             </a>
           </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="3360"
-              data-url="evolution"
-            >
-              <span> Evolution </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 170
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="1084"
-              data-url="pragmaticplay"
-            >
-              <span> Pragmatic Play </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 100
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="1077"
-              data-url="vivogaming"
-            >
-              <span> Vivogaming </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 39
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="1081"
-              data-url="ezugi"
-            >
-              <span> Ezugi </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 63
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="1080"
-              data-url="tombala"
-            >
-              <span> Tombala </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 5
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="1076"
-              data-url="luckystreak"
-            >
-              <span> Lucky Streak </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 15
-              </span>
-            </a>
-          </li>
-          <li class="lca-submenu-item list-inline-item">
-            <a
-              class="js_dl_categories lca-submenu-link badge_None"
-              data-id="15392"
-              data-url="xpg"
-            >
-              <span> XPG </span>
-              <span class="js_dl_cat_count">
-                {" "}
-                <span class="lca-line">|</span> 13
-              </span>
-            </a>
-          </li>
+
+          {providers_Casino
+            .filter((a) => a.iscasino === 1)
+            .map((item) => (
+              <li
+                class="lca-submenu-item list-inline-item"
+                onClick={() =>
+                  dispatch({ type: PUT_CASINO_PROV_FILT, payload: item.id })
+                }
+              >
+                <a
+                  class={
+                    filter_provider.includes(item.id)
+                      ? "js_dl_categories lca-submenu-link badge_None active"
+                      : "js_dl_categories lca-submenu-link badge_None "
+                  }
+                  data-id="14378"
+                  data-url="amatic"
+                >
+                  <span> {item.lib} </span>
+                  <span class="js_dl_cat_count">
+                    {" "}
+                    <span class="lca-line">|</span>
+                    {item.count_game}
+                  </span>
+                </a>
+              </li>
+            ))}
         </ul>
         <div
-          class="lca-submenu-dropdown-toggler lca-nabvar-controller lca-disabled open"
+          onClick={() => setopendpprovider((s) => !s)}
+          class={
+            opendprovider
+              ? "lca-submenu-dropdown-toggler lca-nabvar-controller open"
+              : "lca-submenu-dropdown-toggler lca-nabvar-controller"
+          }
           id="js_open_prvs_btn"
         ></div>
       </div>

@@ -1,4 +1,14 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SET_FAVORIS_GAMES } from "../../redux/actions/types";
+
 function GameItem({ size, id, img, name, extra, cat, like }) {
+  const [Favoris, setFavoris] = useState(false);
+  const AjouterFa = () => {
+    dispatch({ type: SET_FAVORIS_GAMES });
+  };
+
+  const dispatch = useDispatch();
   return (
     <div
       class={
@@ -24,7 +34,18 @@ function GameItem({ size, id, img, name, extra, cat, like }) {
       <div class="lca-card-hover animate">
         <div class="lca-card-hover-header">
           <div class="lca-card-name">{name}</div>
-          <span class="star_icon js_game_fav "></span>
+          <span
+            onClick={() => {
+              setFavoris((s) => !s);
+              dispatch({ type: SET_FAVORIS_GAMES });
+            }}
+            class={
+              Favoris
+                ? "star_icon js_game_fav active "
+                : "star_icon js_game_fav"
+            }
+          ></span>
+          {AjouterFa}
         </div>
         <div class="lca-card-btn-wrapper d-flex align-items-center justify-content-center flexCol">
           <a
