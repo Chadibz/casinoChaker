@@ -2,10 +2,13 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SET_FAVORIS_GAMES } from "../../redux/actions/types";
 
-function GameItem({ size, id, img, name, extra, cat, like }) {
+function GameItem({ size, id, img, name, extra, cat, like, trah }) {
+  const { games, filter_provider, searchtext, lastpageloading, isfavori } =
+    useSelector((state) => state.Games);
   const [Favoris, setFavoris] = useState(false);
-  const AjouterFa = () => {
-    dispatch({ type: SET_FAVORIS_GAMES });
+  const [Favorisid, setFavorisid] = useState(0);
+  const AjouterFa = (Favorisid) => {
+    dispatch({ type: SET_FAVORIS_GAMES, payload: Favorisid });
   };
 
   const dispatch = useDispatch();
@@ -37,7 +40,7 @@ function GameItem({ size, id, img, name, extra, cat, like }) {
           <span
             onClick={() => {
               setFavoris((s) => !s);
-              dispatch({ type: SET_FAVORIS_GAMES });
+              dispatch({ type: SET_FAVORIS_GAMES, payload: { trah } });
             }}
             class={
               Favoris
@@ -45,7 +48,6 @@ function GameItem({ size, id, img, name, extra, cat, like }) {
                 : "star_icon js_game_fav"
             }
           ></span>
-          {AjouterFa}
         </div>
         <div class="lca-card-btn-wrapper d-flex align-items-center justify-content-center flexCol">
           <a

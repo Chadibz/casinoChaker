@@ -24,7 +24,7 @@ const Providers = (state = initialState, { type, payload }) => {
           ...state,
           isloading: false,
           providers_Casino: payload.casino.providers,
-          categorie: payload.casino.categories
+          categorie: payload.casino.categories,
         };
       }
     default:

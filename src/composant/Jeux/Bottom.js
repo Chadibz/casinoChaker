@@ -7,12 +7,12 @@ import {
 import FilterCasino from "./FilterCasino";
 import GameItem from "./GameItem";
 import GameItem2 from "./GameItem2";
+import { Favorigame } from "../../redux/actions/Games";
 
 function Bottom() {
   const dispatch = useDispatch();
-  const { games, filter_provider, searchtext, lastpageloading } = useSelector(
-    (state) => state.Games
-  );
+  const { games, filter_provider, searchtext, lastpageloading, isfavori } =
+    useSelector((state) => state.Games);
   useBottomScrollListener(() => loadMore(), {
     offset: 300,
   });
@@ -128,6 +128,7 @@ function Bottom() {
               extra=""
               cat="Top"
               like="123"
+              trah={item.id}
             ></GameItem>
           ))}
       </div>
