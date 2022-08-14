@@ -1,15 +1,22 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  CLEAR_CASINO_CAT_FILT,
   CLEAR_CASINO_PROV_FILT,
+  PUT_CASINO_CAT_FILT,
   PUT_CASINO_PROV_FILT,
   PUT_CASINO_SEARCH_FILT,
 } from "../../redux/actions/types";
 
 function FilterCasino() {
-  const { searchtext, filter_provider } = useSelector((state) => state.Games);
-  const { providers_Casino } = useSelector((state) => state.Providers);
+  const { searchtext, filter_provider, Filter_Categori } = useSelector(
+    (state) => state.Games
+  );
+  const { providers_Casino, categorie } = useSelector(
+    (state) => state.Providers
+  );
   const [opendprovider, setopendpprovider] = useState(false);
+  const [opendCat, setopendCat] = useState(false);
   const dispatch = useDispatch();
   const searchchange = (e) => {
     dispatch({ type: PUT_CASINO_SEARCH_FILT, payload: e.target.value });
@@ -33,153 +40,50 @@ function FilterCasino() {
             class="lca-navbar-nav d-flex flex-grow-1"
             id="js_lobby_groups_nav"
           >
-            <li class="lca-navbar-item">
+            <li
+              class="lca-navbar-item"
+              onClick={() => dispatch({ type: CLEAR_CASINO_CAT_FILT })}
+            >
               <a
-                class="js_dl_groups lca-navbar-link badge_None default active"
-                data-id="9956"
-                data-url="all"
-                data-type-id="15"
-                data-take-count="12"
-              >
-                All
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_Hot  "
+                class={
+                  Filter_Categori.length === 0
+                    ? "js_dl_groups lca-navbar-link badge_None default active"
+                    : "js_dl_groups lca-navbar-link badge_None default "
+                }
                 data-id="18615"
                 data-url="pragmatictournament"
                 data-type-id="43"
                 data-take-count="12"
               >
-                Ton été festif
-                <span class="lca-menu-badge">Hot</span>
+                {"ALL"}
               </a>
             </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9982"
-                data-url="dropsandwins"
-                data-type-id="42"
-                data-take-count="12"
+            {categorie.map((item) => (
+              <li
+                class="lca-navbar-item"
+                onClick={() =>
+                  dispatch({ type: PUT_CASINO_CAT_FILT, payload: item.id })
+                }
               >
-                Drops &amp; Wins
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9957"
-                data-url="mostpopular"
-                data-type-id="5"
-                data-take-count="12"
-              >
-                Most Popular
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9959"
-                data-url="new"
-                data-type-id="1"
-                data-take-count="12"
-              >
-                New
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9960"
-                data-url="slots"
-                data-type-id="9"
-                data-take-count="12"
-              >
-                Slots
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9961"
-                data-url="baccarat"
-                data-type-id="14"
-                data-take-count="12"
-              >
-                Baccarat
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9962"
-                data-url="roulette"
-                data-type-id="10"
-                data-take-count="12"
-              >
-                Roulette
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9963"
-                data-url="poker"
-                data-type-id="12"
-                data-take-count="12"
-              >
-                Poker
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9964"
-                data-url="lotterygames"
-                data-type-id="21"
-                data-take-count="12"
-              >
-                Lottery Games
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9965"
-                data-url="other"
-                data-type-id="8"
-                data-take-count="12"
-              >
-                Other
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9967"
-                data-url="mostliked"
-                data-type-id="3"
-                data-take-count="12"
-              >
-                Most Liked
-              </a>
-            </li>
-            <li class="lca-navbar-item">
-              <a
-                class="js_dl_groups lca-navbar-link badge_None  "
-                data-id="9968"
-                data-url="trendinggames"
-                data-type-id="6"
-                data-take-count="12"
-              >
-                Trending Games
-              </a>
-            </li>
+                <a
+                  class={
+                    Filter_Categori.includes(item.id)
+                      ? "js_dl_groups lca-navbar-link badge_None default active"
+                      : "js_dl_groups lca-navbar-link badge_None default "
+                  }
+                  data-id="18615"
+                  data-url="pragmatictournament"
+                  data-type-id="43"
+                  data-take-count="12"
+                >
+                  {item.lib}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div
+          onClick={() => setopendCat((s) => !s)}
           class="lca-nabvar-controller lca-nabvar-controller-next"
           id="js_groups_nav_right_btn"
         ></div>
@@ -342,7 +246,12 @@ function FilterCasino() {
               </div>
             </div>
             <div
-              class="lca-nabvar-controller lca-nabvar-controller-next lca-disabled"
+              onClick={() => setopendCat((s) => !s)}
+              class={
+                opendCat
+                  ? "lca-nabvar-controller lca-nabvar-controller-next lca-disabled"
+                  : "lca-nabvar-controller lca-nabvar-controller-next"
+              }
               id="js_filter_themes_right_btn"
             ></div>
           </div>

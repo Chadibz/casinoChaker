@@ -1,5 +1,4 @@
 import Bottom from "./Bottom";
-import FilterBloc from "./FilterBloc";
 
 import Slick from "./Slick";
 import Slider from "./Slick";

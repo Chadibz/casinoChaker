@@ -33,7 +33,7 @@ export const getUSerDetails = () => async (dispatch) => {
 export const getsildes = () => async (dispatch) => {
   try {
     const result = await axios.get(
-      `${REACT_APP_URL_API}` + "Getsliders?lang=fr"
+      `${REACT_APP_URL_API1}` + "Getsliders?lang=fr"
     );
 
     dispatch({

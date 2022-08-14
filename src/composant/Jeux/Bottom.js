@@ -11,8 +11,14 @@ import { Favorigame } from "../../redux/actions/Games";
 
 function Bottom() {
   const dispatch = useDispatch();
-  const { games, filter_provider, searchtext, lastpageloading, isfavori } =
-    useSelector((state) => state.Games);
+  const {
+    games,
+    filter_provider,
+    searchtext,
+    lastpageloading,
+    isfavori,
+    Filter_Categori,
+  } = useSelector((state) => state.Games);
   useBottomScrollListener(() => loadMore(), {
     offset: 300,
   });
@@ -117,6 +123,10 @@ function Bottom() {
             (b) =>
               filter_provider.includes(b.idprov) || filter_provider.length === 0
           )
+          .filter(
+            (c) =>
+              Filter_Categori.includes(c.cat) || Filter_Categori.length === 0
+          )
           .sort((a, b) => (a.index < b.index ? 1 : -1))
           .slice(0, (lastpageloading + 1) * 40)
           .map((item) => (
@@ -126,7 +136,7 @@ function Bottom() {
               img={item.url}
               name={item.lib}
               extra=""
-              cat="Top"
+              cat={item.cat}
               like="123"
               trah={item.id}
             ></GameItem>
