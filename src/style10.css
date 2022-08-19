@@ -1,0 +1,2477 @@
+/* Minification failed. Returning unminified contents.
+(1990,28): run-time error CSS1039: Token not allowed after unary operator: '-cdn-jackpot_icons'
+ */
+
+@font-face {
+    font-family: 'casinoIcons';
+    src: url('./content/fonts/icons_vers/icons.eot'), url('./content/fonts/icons_vers/icons.eot') format('embedded-opentype'), url('./content/fonts/icons_vers/icons.woff') format('woff'), url('./content/fonts/icons_vers/icons.ttf') format('truetype');
+}
+
+/*grid styles*/
+.w100 {
+    width: 100%;
+}
+
+.flexcol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.animate {
+    -webkit-transition: 0.2s ease-in-out 0s;
+    -o-transition: 0.2s ease-in-out 0s;
+    transition: 0.2s ease-in-out 0s;
+}
+
+.flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex_parent {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.fixed {
+    position: fixed;
+}
+
+#content.content_new_styles {
+    padding: 10px 14px
+}
+
+/*allparts*/
+
+.name_vidget {
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 11px 16px;
+    margin: 8px 5px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.2px;
+    position: relative;
+    z-index: 0;
+}
+
+.topCasino_block .name_vidget,
+.top_jackpots__container .name_vidget,
+.landing_contet .name_vidget {
+    margin-left: 15px;
+}
+
+.end_space {
+    min-width: 11px;
+    min-height: 48px;
+    display: block;
+}
+
+.padding_inner {
+    padding: 0 12px 0 0;
+}
+
+.noscroll {
+    overflow: hidden
+}
+
+#header {
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    height: auto;
+    padding: 0;
+    min-height: 50px;
+}
+
+.header_fix {
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 100 !important;
+}
+
+.header_bottom {
+    height: 50px;
+    padding: 0 8px;
+}
+
+.header__wrap_block {
+    height: 50px;
+    z-index: 100;
+}
+
+/*footer*/
+#footer {
+    padding-bottom: 120px;
+}
+
+.footer_cont {
+    margin: auto;
+    max-width: 328px;
+}
+
+.drop_down_lang_arrow {
+    position: relative;
+    width: 100%;
+}
+
+.drop_down_lang__front_el {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    top: 0;
+    left: 15%;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    pointer-events: none;
+    text-transform: uppercase;
+    height: 44px;
+}
+
+.drop_down_lang {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0 100px !important;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.toWeb {
+    border-radius: 4px;
+    font-size: 14px;
+    height: 44px;
+    line-height: 44px !important;
+    text-transform: uppercase;
+}
+
+.footer_links {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer_links>div {
+    width: 156px;
+    margin: 24px 0;
+}
+
+.footer_links a {
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    line-height: 29px;
+}
+
+.footer_links>div:first-child a {
+    text-align: right;
+}
+
+.drop_down_lang_arrow:after {
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #666666;
+    position: absolute;
+    right: 9px;
+    top: 20px;
+}
+
+/*new landing page nav*/
+
+.tl_nav_link {
+    width: calc(50% - 8px);
+    margin: 4px;
+    border-radius: 8px;
+    min-height: 13vw;
+}
+
+.tl_navigation {
+    padding: 0 11px;
+}
+
+.nav_item {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    background: #2b2b2b;
+    position: relative;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav_item>img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.nav_title {
+    width: 100%;
+    height: 44px;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 44px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*/slider*/
+
+.nc__slider_block {
+    overflow: visible !important;
+    max-height: 400px;
+    z-index: 0;
+    position: static;
+    min-height: 340px;
+    width: 100vw;
+}
+
+.nc__slider_block img {
+    height: auto;
+    z-index: -1;
+    top: 0;
+    position: relative;
+    opacity: 0;
+}
+
+.with_shadow_slider {
+    position: relative;
+    margin-bottom: -30px;
+    min-height: 120px;
+}
+
+/*new middle banner*/
+.middle_banner_mob {
+    overflow-x: auto;
+    padding: 0 11px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    max-height: 60vw
+}
+
+.slot_banners a:last-child img {
+    border-radius: 8px;
+}
+
+.slot_banners a:last-child {
+    padding-right: 15px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.slot_banners {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 68vw;
+    white-space: nowrap;
+    padding: 0 11px;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    max-height: 400px;
+}
+
+.slot_banners a {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 8px);
+    max-width: 280px;
+    height: auto;
+    margin: 4px 4px 0;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.slot_banners img {
+    max-width: 100%;
+}
+
+.casino_game_banner {
+    max-width: 210px;
+}
+
+.ui-panel-wrapper,
+.ui-content {
+    overflow: inherit;
+}
+
+.middle_banner_mob a {
+    max-width: 450px;
+    width: calc(100vw - 30px);
+    min-width: 250px;
+    margin: 4px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+}
+
+.middle_banner_mob img {
+    width: 100%;
+}
+
+.matches_block {
+    padding: 15px 15px 0px
+}
+
+/*training animate*/
+.training__body {
+    overflow: hidden;
+}
+
+.training__block {
+    display: none;
+}
+
+.training__body .training__block {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+
+.training__block_circle {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-transform: translate(-12px, -10px);
+    -ms-transform: translate(-12px, -10px);
+    transform: translate(-12px, -10px);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 7px 0 #ff0000, 0 0 0 3000px rgba(0, 0, 0, 0.7);
+}
+
+.training__block_circle__2,
+.training__block_circle__3 {
+    -webkit-transform: translate(-26px, -10px);
+    -ms-transform: translate(-26px, -10px);
+    transform: translate(-26px, -10px);
+}
+
+.training__block_background {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.training__info {
+    width: calc(100vw - 16px);
+    height: auto;
+    left: 8px;
+    position: fixed;
+    bottom: 125px;
+    z-index: 101;
+    padding: 12px 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.training__block_circle:before {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    margin: auto;
+    bottom: calc(100% - 15px);
+    right: 0;
+    left: 0;
+    width: 0;
+    border-top: 20px solid #fff;
+}
+
+.training__info_2,
+.training__info_3 {
+    bottom: 90px;
+}
+
+.training__buttons {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.training__skip {
+    margin: 0 12px;
+    cursor: pointer
+}
+
+.training__next {
+    cursor: pointer
+}
+
+/*fixed menu*/
+.menu_circle:before {
+    content: "";
+    display: block;
+    height: 60px;
+    width: 56px;
+    margin: auto;
+    border-radius: 50%;
+    -webkit-box-shadow: 4px 3px 40px 1200px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 40px 1200px rgba(0, 0, 0, 0.75);
+    margin-top: -33px;
+}
+
+.menu_circle {
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    bottom: 0;
+    z-index: -1;
+}
+
+.casino__fixed_menu {
+    background: transparent;
+    height: 75px;
+    bottom: 0;
+    z-index: 100;
+}
+
+.fixed_menu__icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    font-size: 23px;
+    font-family: iconsFont;
+    text-align: center;
+}
+
+.ic_games:before {
+    content: "I";
+}
+
+.ic_casino::before {
+    content: "9";
+}
+
+.ic_history:before {
+    content: ")";
+}
+
+.ic_promotion:before {
+    content: "J";
+}
+
+.ic_filter:before {
+    content: "\e908";
+}
+
+.ic_search:before {
+    content: "\e911";
+}
+
+.ic_casino::before {
+    content: "9";
+}
+
+
+.fixed_menu__text {
+    padding-top: 5px;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+@media all and (max-width: 350px) {
+
+    .fixed_menu__text {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+}
+
+.fixed_menu__ul {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.fixed_menu__li {
+    width: 20%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    text-indent: -5px;
+    padding-bottom: 20px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.fixed_menu__play_button {
+    position: relative;
+    bottom: 10px;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-indent: 12px;
+    left: 1px
+}
+
+.fixed_menu__play_button::after {
+    content: 'K'
+}
+
+.fixed_menu__li_play {
+    width: 20%;
+    background-color: transparent;
+    padding-bottom: 42px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width: 380px) {
+    #gameHistory.fixed_menu__li {
+        min-width: 78px;
+    }
+}
+
+/*casino main page*/
+
+.casino-tab-container .search-container.active {
+    z-index: 1;
+}
+
+.casino-tab-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin: 0;
+    width: 100%;
+}
+
+.casino-tab-container.casino_fixed_menu,
+.lc-fixed-menu {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    z-index: 12;
+}
+
+.links_block_x_scroll_hidden {
+    width: calc(100% + 26px);
+    margin: 0 -14px;
+}
+
+#casinoplayContent .name_vidget {
+    margin: 8px 2px;
+}
+
+/*games containers*/
+.last_played__games_cont {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 265px;
+    white-space: nowrap;
+    padding: 0 11px;
+}
+
+.last_played__games_cont .game__main {
+    display: inline-block;
+    vertical-align: top;
+    width: 168px;
+    height: auto;
+    margin: 4px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.last_played__games {
+    margin-bottom: 50px;
+    display: none;
+}
+
+.most_liked__games_cont,
+.most_liked__games_cont_play {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    width: calc(100vw - 12px);
+}
+
+.most_liked__games .game__block:last-child {
+    padding-right: 12px;
+}
+
+.most_liked__games .game__main {
+    min-width: 100px;
+    width: calc(50vw - 15px);
+    max-width: 168px;
+}
+
+.favorite_see__notlogin_block {
+    margin-bottom: 20px;
+}
+
+.favorite_see__notlogin_img {
+    width: 140px
+}
+
+.favorite_see__notlogin_text {
+    margin: 24px 0 16px;
+    font-size: 16px;
+    width: 160px;
+    text-align: center;
+    line-height: 19px;
+}
+
+.favorite_see__notlogin_button {
+    min-width: 170px;
+    width: auto;
+}
+
+/*game more*/
+.game__name {
+    font-size: 16px;
+    text-align: center;
+    margin: 24px auto;
+    text-transform: uppercase;
+}
+
+@media screen and (max-height: 450px) {
+    .game__more_block {
+        padding: 15px;
+    }
+
+    .game__name {
+        margin: 15px auto;
+    }
+
+    .game__more_block__img {
+        padding: 0 10px;
+        max-height: calc(100% - 250px);
+        min-height: 150px;
+        -o-object-fit: contain;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    .game_img_btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 650px;
+        margin: auto;
+    }
+
+    .game__btns {
+        padding: 0 10px;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .game__more_block .btn_block {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .game__more_block .game__like {
+        margin: 0
+    }
+}
+
+.casino__container {
+    margin: 0 13px;
+    z-index: 10;
+}
+
+/*casino navigation*/
+.casino_nav__links_block {
+    line-height: 55px;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.links_block_x_scroll_hidden::before {
+    content: "";
+    height: 44px;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    background: #000;
+    right: 0;
+    pointer-events: none;
+}
+
+.casino_fixed_menu.links_block_x_scroll_hidden::before {
+    right: 25px !important;
+}
+
+.casino_nav__links_block div {
+    height: 100%;
+}
+
+.casino_nav__links_block a {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 12px;
+    cursor: pointer
+}
+
+
+.casino_nav__links_block>div:last-child {
+    padding-right: 0;
+}
+
+.casino_nav__links_block li:last-of-type {
+    padding-right: 30px;
+}
+
+.casino_nav__links__gradient {
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    top: 0;
+    background: rgb(255, 255, 255);
+    background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(12, 12, 12, 1)));
+    background: -o-linear-gradient(left, transparent 0%, rgba(12, 12, 12, 1) 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(12, 12, 12, 1) 100%);
+}
+
+/*games*/
+.game__block {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 2px;
+    position: relative;
+    cursor: pointer
+}
+
+.game__main {
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.game__main img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 112px;
+}
+
+.game__more_block {
+    z-index: 999;
+    min-width: 250px;
+    width: 100%;
+    height: calc(100vh + 50px);
+    overflow: auto;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px 15px;
+}
+
+.game__more_block .star__icon:after {
+    margin: 0 8px 0 0px;
+    padding: 0;
+}
+
+.game__block .star__icon {
+    left: 10px;
+    top: 5px;
+    z-index: 10;
+}
+
+.game__more_block .game__like {
+    margin: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: auto;
+    border-radius: 4px;
+    height: 32px;
+}
+
+.game__header {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.jackpot__value {
+    width: 100%;
+    padding-left: 25px;
+}
+
+.jackpot__value span {
+    text-align: center;
+    font-size: 18px;
+}
+
+.special_jackpot {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.component_jackpot_slider {
+    font-weight: 700;
+}
+
+.landing_jackpot_content .component_jackpot_slider {
+    height: 35px !important;
+}
+
+
+.close__game__more_block {
+    font-size: 25px;
+    margin-left: auto;
+    cursor: pointer
+}
+
+.close__game__more_block::after {
+    font-family: iconsFont;
+    content: "\e906";
+    padding: 10px;
+    margin: -10px;
+}
+
+.game__more_block__img {
+    padding: 20px 30px;
+    display: block;
+    margin: auto;
+    max-width: 550px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.btn_block {
+    padding: 0 30px;
+}
+
+.game__more_block .btn_block {
+    max-width: 550px;
+    margin: auto
+}
+
+.btn_block a {
+    text-align: center;
+    height: 44px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.game__more_block___backgr_img {
+    position: absolute;
+    z-index: -1;
+    height: 100% !important;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(20px) brightness(0.6);
+    filter: blur(20px) brightness(0.6);
+}
+
+.mason_item>.game__block {
+    width: 100%;
+    height: 100%;
+}
+
+/*casino games*/
+.disp_grid__block {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    -ms-grid-columns: (50%)[];
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-flow: row dense;
+}
+
+.mason_item {
+    height: 100%;
+    min-height: 80px;
+}
+
+.mason_item--width2 {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+}
+
+.mason_item--height2 {
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+}
+
+@media all and (min-width: 600px) {
+    .disp_grid__block {
+        -ms-grid-columns: (33%)[];
+        grid-template-columns: repeat(3, 33%);
+    }
+
+    .filter_result_case__title,
+    .seasch__game_not_found_mob {
+        -ms-grid-column-span: 3;
+        grid-column: 3 span;
+    }
+}
+
+@supports not (display: grid) {
+    .disp_grid__block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
+    .mason_item {
+        width: 49%;
+    }
+
+    .mason_item--width2 {
+        width: 100%;
+    }
+}
+
+/*icons*/
+.casino__container .New:after {
+    height: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.6);
+    padding: 1px 5px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: -10px;
+    width: auto;
+    line-height: initial;
+    content: "new";
+    color: #000;
+    background: #FFB700;
+}
+
+.casino__container .New:before {
+    content: "";
+    border: 3px solid transparent;
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    right: -10px;
+    z-index: 4;
+    border-top: 3px solid #C48700;
+    border-right: 3px solid #C48700;
+}
+
+/*play page content*/
+#casinoplayContent #playPageContent {
+    padding: 30px 10px;
+}
+
+#content.content_min_height {
+    min-height: 0;
+    padding: 0 14px;
+}
+
+#casinoplayContent .nc__heading {
+    margin: 0px 5px 12px;
+}
+
+.recommended_games__container,
+.last_played__container,
+.favorites__container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-height: 65vw;
+    white-space: nowrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    margin: 0 -10px 16px;
+    padding-left: 10px;
+}
+
+.recommended_games__container .badgeStyle,
+.last_played__container .badgeStyle {
+    display: none;
+}
+
+.recommended_games__container .game__main,
+.last_played__container .game__main {
+    width: 100%;
+}
+
+.favorites__container .game__block,
+.recommended_games__container .game__block,
+.last_played__container .game__block {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    margin: 4px 2px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(50% - 15px);
+    padding: 0;
+}
+
+/*.recommended_games__container .game__block:last-child, .last_played__container .game__block:last-child {
+            padding-right: 10px;
+        }*/
+
+.play_page__container .recommended_games__container .game__block:last-child {
+    padding-right: 0;
+}
+
+.component_jackpot_slider_number_wrapper0.hide {
+    display: none !important;
+}
+
+.blink {
+    -webkit-animation: blinker 1s linear infinite;
+    animation: blinker 1s linear infinite;
+}
+
+.play_page__container .most_liked__games .game__main {
+    width: calc(50vw - 20px);
+    max-width: initial;
+}
+
+
+@-webkit-keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.component_jackpot_slider>.comp_jack_padding {
+    padding-left: 10px;
+}
+
+.component_jackpot_slider>.sprtr {
+    padding-left: 0 !important;
+}
+
+/*play page promotions*/
+.play__promotions_container {
+    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    margin: 0 -10px 16px;
+    padding-left: 10px;
+}
+
+.play__promo_mobile_li {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: calc(100% - 30px);
+    margin: 0 4px 0;
+    border-radius: 8px;
+}
+
+.promo_mobile_cont {
+    border-radius: 8px;
+}
+
+.play__promo_space {
+    width: 10px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    order: 1
+}
+
+.play__promo_img_shadow {
+    width: 100%;
+    position: relative;
+}
+
+.play__promo_img_shadow::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.play__promo_img {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    border-radius: 6px 6px 0 0;
+}
+
+.play__promo_button {
+    margin-top: auto;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.play__promo_title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.play__promo_title .tl_prom_icon {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.play__promo_text {
+    margin: -25px 20px 30px;
+    z-index: 1;
+}
+
+.play__promo_descr {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 17px;
+}
+
+/*filter and search*/
+#searchContent {
+    z-index: 30
+}
+
+#searchContent .popup_flex_box {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    width: 100vw;
+    height: calc(100% - 125px);
+}
+
+#casino_filter_popup {
+    position: fixed;
+    z-index: 50;
+    height: 100vh;
+    top: 93px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.games_filter_popup {
+    padding: 24px 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.games_filter_content {
+    padding-bottom: 60px;
+}
+
+.switcher_block {
+    position: absolute;
+    right: 0;
+    top: 26px;
+}
+
+.search_switcher {
+    width: 37px;
+    height: 22px;
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin-left: 8px;
+    cursor: pointer
+}
+
+.search_switcher:before {
+    content: "";
+    display: block;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .games_filter_content {
+        padding-bottom: 110px;
+    }
+}
+
+.checked .search_switcher:before {
+    left: 15px;
+}
+
+.games_filter_popup .switcher_label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+}
+
+.search__icon {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 18px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.search__icon::after {
+    font-family: iconsFont;
+    content: "\e911";
+    -webkit-transition: 0.2s ease-in-out 0s;
+    -o-transition: 0.2s ease-in-out 0s;
+    transition: 0.2s ease-in-out 0s;
+}
+
+/*search part*/
+.nc__heading {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-right: 185px;
+}
+
+.searchContentGame .list-menu1 li {
+    border: none
+}
+
+@media screen and (max-width: 373px) {
+    .nc__heading {
+        font-size: 17px;
+    }
+
+    .games_filter_popup .switcher_label {
+        font-size: 13px;
+    }
+}
+
+.games_filter_popup .search_filter_input {
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0 35px 0 16px !important;
+    display: block;
+    border: none;
+    height: 39px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    margin: 0;
+}
+
+.search_filter_input:-webkit-autofill,
+.search_filter_input:-webkit-autofill:hover,
+.search_filter_input:-webkit-autofill:focus,
+.search_filter_input:-webkit-autofill:active,
+.lca-search-input:-webkit-autofill,
+.lca-search-input:-webkit-autofill:hover,
+.lca-search-input:-webkit-autofill:focus,
+.lca-search-input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #999;
+}
+
+.filter_search_content {
+    margin-bottom: 40px;
+}
+
+.filter_search_content .ui-input-text {
+    margin: 0;
+}
+
+.games_search_content .searchContentGame {
+    padding-right: 0;
+}
+
+.games_search_content .list-menu1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.games_filter_popup .seasch__game_not_found_mob {
+    text-align: center
+}
+
+.games_filter_popup .seasch__game_not_found_mob::before {
+    content: ".";
+    font-family: ProductIconsFont !important;
+    font-size: 90px;
+    display: block;
+    height: 120px;
+    line-height: initial;
+}
+
+.games_search_content .list-menu1 li {
+    width: calc(50% - 4px);
+    height: auto !important;
+    padding: 0 !important;
+    margin: 2px;
+    position: relative;
+    border-radius: 4px !important;
+}
+
+.games_search_content li .star__icon {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    line-height: 1;
+}
+
+.fs__input_wrap {
+    position: relative;
+    margin-bottom: 34px;
+    overflow: visible;
+}
+
+#js_filter_msg,
+#js_search_msg {
+    position: absolute;
+    color: #fc0000;
+    font-size: 13px;
+    top: 46px;
+    line-height: 1.1;
+}
+
+#js_filter_msg {
+    font-weight: 500;
+}
+
+.fs__input_wrap .close-search {
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    font-family: ProductIconsFont;
+    font-size: 20px;
+    top: 11px;
+    right: 6px;
+    position: absolute;
+    display: none;
+}
+
+.fs__input_wrap .close-search:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 9px;
+    left: 0px;
+}
+
+.fs__input_wrap .close-search:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 9px;
+    left: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.games_search_content .list-menu1 img {
+    width: 100% !important;
+    border-radius: 4px !important;
+    vertical-align: top;
+    min-height: 100px;
+}
+
+/*filter part*/
+.games_filter_title {
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.games_filter_element,
+.games_filter_list_show {
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 22px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.games_filter_list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.filter__more_games {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px;
+    height: 100%;
+    line-height: 20px;
+    border-radius: 4px;
+}
+
+.filter_result__go_back {
+    text-decoration: underline;
+    margin-left: auto;
+    text-transform: capitalize;
+    font-size: 16px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer
+}
+
+.games_filter_popup__footer {
+    position: fixed;
+    bottom: 74px;
+    height: 60px;
+    right: 0;
+    left: 0;
+    -webkit-box-shadow: 0px -5px 7px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px -5px 7px rgba(0, 0, 0, 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 16px;
+    z-index: 1;
+}
+
+.games_filter_reset,
+.games_filter_show {
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 49%;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.overflow_hidden_abs {
+    overflow: hidden !important;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: none;
+}
+
+.games_filter_list_show.opened {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.games_filter_list_show:after {
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #999;
+}
+
+/*filter and search*/
+
+.filter_result__block {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.filter_result__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 16px 0;
+}
+
+.seasch__game_not_found_mob {
+    color: #fff;
+    width: 100%;
+    -ms-grid-column-span: 2;
+    grid-column: 2 span;
+}
+
+.filter_result_case__title {
+    color: #999;
+    width: 100%;
+    -ms-grid-column-span: 2;
+    grid-column: 2 span;
+}
+
+.filter_result_case__title .name_vidget {
+    margin: 16px 5px 8px;
+}
+
+.games_search_content .list-menu1 li.seasch__game_not_found_mob {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 75px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.filter_result__cases {
+    padding-bottom: 16px;
+}
+
+.filter_result__cases li {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.filter_result__cases li span {
+    padding-right: 5px;
+}
+
+.filter_result__sort_by {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.fr__sort_by_drpdwn {
+    position: relative
+}
+
+.fr__sort_by_title {
+    padding: 0 5px;
+    margin-left: auto;
+}
+
+.fr__sort_by_drpdwn_el {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding: 5px 10px;
+    z-index: 11;
+}
+
+.fr__sort_by_drpdwn_el li {
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.fr__sort_by_drpdwn_button {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.fr__sort_by_drpdwn_button:after {
+    font-family: ProductIconsFont;
+    content: "\32";
+    font-size: 11px;
+    padding: 5px;
+}
+
+/*icons opened game info*/
+.game__btns_like_favorite {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 0 15px;
+    max-width: 550px;
+    margin: auto;
+}
+
+.star__icon:after {
+    font-family: iconsFont;
+    content: "\e913";
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin: -5px;
+}
+
+.star__icon.deletfavorite:after {
+    content: '\e912';
+}
+
+.star_icon__place {
+    width: 25px
+}
+
+.like_icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.like_icon:after {
+    font-family: iconsFont;
+    content: "\e90e";
+}
+
+.star__icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 16px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    padding: 6px 12px 6px 6px;
+    font-size: 12px;
+    min-height: 32px;
+    border-radius: 4px;
+    max-width: 192px;
+    line-height: 1;
+}
+
+.dislike_game .like_icon:after {
+    content: '\e90d';
+}
+
+.game__like {
+    height: 24px;
+    padding: 0 6px;
+    margin: 0 16px;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.game__like_value {
+    margin: 0 3px;
+    font-size: 14px;
+}
+
+.games li span {
+    width: auto;
+    min-width: initial;
+}
+
+/*promotion filters*/
+.filters_slider_cont {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    min-height: 63px;
+    background-color: #1A1A1A;
+    align-items: center;
+    padding: 0 7px;
+}
+
+.tl_prom_slider_items .tl_prom_icon {
+    width: auto;
+    margin-right: 10px;
+}
+
+.tl_prom_slider_items.btn_sec {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent !important;
+    color: #fff !important;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+#slider_wrapper {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-box-shadow: 0px 6px 6px -3px rgba(26, 26, 26, 1);
+    -moz-box-shadow: 0px 6px 6px -3px rgba(26, 26, 26, 1);
+    box-shadow: 0px 6px 6px -3px rgba(26, 26, 26, 1);
+}
+
+#slideLeft {
+    height: 100%;
+    width: 40px;
+    font-family: ProductIconsFont;
+    font-size: 16px;
+    line-height: 61px;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-box-shadow: -20px 0px 41px 68px rgba(26, 26, 26, 0.82);
+    -moz-box-shadow: -20px 0px 41px 68px rgba(26, 26, 26, 0.82);
+    box-shadow: -20px 0px 41px 68px rgba(26, 26, 26, 0.82);
+    background-image: linear-gradient(to left, rgba(26, 26, 26, 0), rgba(26, 26, 26, 0.9));
+    cursor: pointer;
+}
+
+#slideRight {
+    height: 100%;
+    width: 40px;
+    font-family: ProductIconsFont;
+    font-size: 16px;
+    line-height: 61px;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-box-shadow: -23px 0px 41px 68px rgba(26, 26, 26, 0.82);
+    -moz-box-shadow: -23px 0px 41px 68px rgba(26, 26, 26, 0.82);
+    box-shadow: -23px 0px 41px 68px rgba(26, 26, 26, 0.82);
+    background-image: linear-gradient(to right, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0));
+    cursor: pointer;
+}
+
+.training__info {
+    color: #333;
+    background: #fff;
+}
+
+.training__next {
+    color: #ffb700;
+}
+
+.casino_nav_fav_game_not_found {
+    padding: 39px 0;
+    line-height: 1.5;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    grid-column: 1/4;
+    white-space: normal;
+}
+
+.casino_nav_fav_game_not_found img {
+    display: block;
+    margin: 0 auto 24px;
+}
+
+.casino_nav_fav_game_not_found span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.top_jackpots__scroll {
+    white-space: nowrap;
+    overflow: auto;
+    padding-top: 0;
+    padding-left: 14px;
+    margin-top: -8px;
+}
+
+.top_jackpots__anim {
+    margin: 0;
+    width: 100%;
+    background-size: 100% 2500px;
+    background-repeat: no-repeat;
+    padding: 5px 3px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    background-image: url(./img/icons/redesign/jackpot_backgr.png);
+}
+
+.top_jackpots__block {
+    height: 58px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    margin: auto 0 5px;
+    position: relative;
+    font-size: 18px;
+    flex-shrink: 0;
+    padding: 0 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    max-width: 450px;
+    width: calc(100vw - 30px);
+    min-width: 250px;
+    z-index: -1;
+}
+
+.top_jackpots__block:last-child {
+    padding-right: 10px;
+}
+
+.top_jackpots__name {
+    font-size: 20px;
+    height: 14px;
+    width: 90px;
+    position: absolute;
+    top: -14px;
+    border-radius: 18px 18px 0 0;
+    text-align: center;
+    padding: 3px 5px 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.top_jackpots__name img {
+    width: 50px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    vertical-align: top;
+    margin-top: 3px;
+}
+
+.top_jackpot_icon {
+    display: block;
+    height: 25px;
+    min-width: 23px;
+    background-image: var(--cdn-jackpot_icons);
+    background-repeat: no-repeat;
+    margin: 0 8px;
+}
+
+.top_jackpot_icon.ic_01 {
+    background-position: 0 -87px;
+}
+
+.top_jackpot_icon.ic_02 {
+    background-position: 0 -58px;
+}
+
+.top_jackpot_icon.ic_03 {
+    background-position: 0 -28px;
+}
+
+.top_jackpot_icon.ic_04 {
+    background-position: 0 0;
+}
+
+.top_jackpots__crns {
+    padding: 0 5px;
+    font-size: 26px;
+    position: relative;
+    top: -2px;
+}
+
+.top_jackpots__value {
+    font-weight: bold;
+    font-size: 26px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center
+}
+
+.top_jackpots__container {
+    max-width: 100%;
+    z-index: 10;
+    overflow: hidden
+}
+
+.toTopBox {
+    width: 88px;
+    height: 44px;
+    border-radius: 4px;
+    margin: 24px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding-bottom: 5px;
+    cursor: pointer
+}
+
+.to_top_icon:before {
+    content: 'У';
+    font-family: 'productIconsfont';
+}
+
+/*start mobile more lobbies*/
+.more_menu_btns_content {
+    position: absolute;
+    display: flex;
+    right: 0;
+    left: 0;
+    bottom: -46px;
+    max-width: 254px;
+    margin: 0 auto;
+    height: 237px;
+    transform: rotate(-180deg);
+    z-index: -1;
+    transition: all 0.4s ease;
+    padding-bottom: 124px;
+    pointer-events: none;
+}
+
+.more_menu_btns_content:before {
+    content: "";
+    display: flex;
+    width: 77px;
+    height: 77px;
+    border: 78px solid rgba(0, 0, 0, 0.94);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 225px;
+    max-height: 225px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*more menu icons*/
+.casino__fixed_menu .ic_casino::before {
+    content: "I";
+}
+
+.casino__fixed_menu .ic_livecasino::before,
+.casino__fixed_menu .ic_onlinegames::before {
+    content: "9";
+}
+
+.casino__fixed_menu .ic_tvgames::before {
+    content: ';';
+}
+
+.casino__fixed_menu .ic_virtualsport::before {
+    content: "u";
+    font-family: ProductIconsFont !important;
+    font-size: 39px !important;
+    line-height: 0.9;
+}
+
+.casino__fixed_menu .ic_fastgames::before {
+    content: "8";
+    font-family: ProductIconsFont !important;
+    font-size: 28px !important;
+    line-height: 0.9;
+}
+
+.fixed_menu__ul.flex {
+    z-index: 22;
+    max-width: 393px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.more_menu_btns_content span {
+    margin-bottom: 6px;
+}
+
+.more_menu_links_content {
+    max-width: 222px;
+    margin: 0 auto 3px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.more_menu_links_content a {
+    padding: 0;
+    display: inline-flex;
+    flex: 1;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    color: #CCCCCC;
+    max-width: 51px;
+    width: 57px;
+    height: 57px;
+    line-height: 1;
+}
+
+.more_menu_links_content a:after {
+    content: "";
+    height: 1px;
+    width: 44px;
+    display: block;
+    position: absolute;
+    transform: rotate(44deg);
+    left: 19px;
+    bottom: 40px;
+    pointer-events: none;
+}
+
+/*4 butttons*/
+.more-cont-item-2 a:after,
+.more-cont-item-3 a:after,
+.more-cont-item-4 a:after {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.more-cont-item-4 a:nth-child(2):after {
+    transform: rotate(90deg);
+    bottom: 35px;
+    left: 36px;
+}
+
+.more-cont-item-4 a:nth-child(2) {
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+.more-cont-item-4 a:nth-child(3) {
+    margin-bottom: 28px;
+    z-index: 2;
+}
+
+.more-cont-item-4 a:nth-child(3):after {
+    transform: rotate(-43deg);
+    bottom: 11px;
+    left: 32px;
+}
+
+.more-cont-item-4 a:last-child {
+    margin: 0 5px 0 -18px;
+    max-height: 43px;
+}
+
+.more-cont-item-4 a:first-child {
+    margin: 0 -18px 0 5px;
+    max-height: 43px;
+}
+
+.more-cont-item-4.more_menu_links_content {
+    margin: 0 auto 11px;
+}
+
+/*3 buttons*/
+.more-cont-item-3 a {
+    line-height: 1.3;
+}
+
+.more-cont-item-3.more_menu_links_content {
+    margin: 0 auto 11px;
+}
+
+.more-cont-item-3 a:nth-child(2):after {
+    transform: rotate(123deg);
+    bottom: 10px;
+    left: 45px;
+}
+
+.more-cont-item-3 a:nth-child(1):after {
+    transform: rotate(54deg);
+    bottom: 49px;
+    left: 32px;
+}
+
+.more-cont-item-3 a:nth-child(2) {
+    margin-bottom: 41px;
+}
+
+.more-cont-item-3 a {
+    height: 59px;
+}
+
+.more_menu_links_content a:last-child:after {
+    display: none;
+}
+
+.opened_lobbies {
+    transform: rotate(0);
+    bottom: -41px;
+    pointer-events: all;
+}
+
+/*2 buttons*/
+.more-cont-item-2 {
+    max-width: 242px;
+}
+
+.more-cont-item-2 a {
+    max-width: 70px;
+    width: 69px;
+    height: 67px;
+}
+
+.more-cont-item-2 a:nth-child(1):after {
+    transform: rotate(90deg);
+    bottom: 70px;
+    left: 72px;
+}
+
+/*end mobile more lobbies*/
+.sliderControlsCont {
+    display: none;
+}
+
+/*start top winners*/
+.lca-top_winners_block {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.lca-top_winners_type_content {
+    display: flex;
+    max-width: 100%;
+    overflow-x: scroll;
+    align-items: center;
+    margin-top: 8px;
+    padding: 0 15px;
+}
+
+.lca-top_winners_item_names {
+    white-space: nowrap;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 15px;
+    border-radius: 3px;
+    height: 38px;
+    line-height: 38px;
+    position: relative;
+    opacity: 0.7;
+}
+
+.lca-top_winners_item_names.active {
+    opacity: 1;
+}
+
+.lca-top_winners_item_names .bg-primary {
+    position: absolute;
+    bottom: 9px;
+    height: 2px;
+    width: 14px;
+    display: none;
+}
+
+.lca-top_winners_item_names.active .bg-primary {
+    display: block;
+}
+
+.lca-top_winners_img {
+    width: 113px;
+    border-radius: 8px 0 0 8px;
+    height: 71px;
+    max-width: 113px;
+}
+
+.lca-top_winners__date {
+    opacity: 0.7;
+    line-height: 1;
+}
+
+.lca-top_winners__game_block {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+}
+
+.lca-top_winners__page {
+    display: none;
+    padding: 15px 5px 6px;
+    min-height: 87px;
+}
+
+.lca_no_winners {
+    padding: 15px;
+    align-items: center;
+    justify-content: center
+}
+
+.lca-top_winners__page.active {
+    display: flex;
+}
+
+.lca-top_winners__text {
+    white-space: nowrap;
+    padding: 8px 10px 6px;
+    min-width: 195px;
+}
+
+.lca-top_winners__game {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin: 0 4px;
+    padding: 0;
+}
+
+.lca-top_winners__game:last-of-type {
+    margin-right: 10px;
+}
+
+.lca-top_winners__game:first-of-type {
+    margin-left: 10px;
+}
+
+.lca-top_winners__value span {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.lca-top_jackpots__crns {
+    font-size: 15px;
+    font-family: ProductIconsFont;
+    padding-bottom: 3px;
+}
+
+.lca-top_winners__value {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    line-height: 21px;
+}
+
+.lca-top_winners__value_split {
+    line-height: 1;
+    padding: 4px 5px 4px 0;
+    font-size: 20px;
+}
+
+.lca-top_winners__bet .lca-top_jackpots__crns {
+    font-size: 11px;
+}
+
+.lca_no_winners {
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 30px);
+    max-width: 380px;
+    background-position: 15px center;
+}
+
+.lca_no_winners_title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+}
+
+.lca_no_winners_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Hide scrollbar */
+.lca-top_winners_type_content::-webkit-scrollbar {
+    display: none;
+}
+
+.lca-top_winners_type_content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.lca-lobby-banner+.lca-top_winners_block {
+    margin-top: 98px;
+}
