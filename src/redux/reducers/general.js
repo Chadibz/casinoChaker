@@ -68,9 +68,12 @@ const general = (state = initialState, { type, payload }) => {
     case SET_NAV_USER_CHANGE:
       if (state.opendnavlogin) {
         document.body.className = "ui-mobile-viewport ui-overlay-d";
+        document.getElementById("idfalr").className = "ui-panel-dismiss";
       } else {
         document.body.className =
           "ui-mobile-viewport ui-overlay-d ui-panel-page-container-themed ui-panel-page-container-b ui-panel-page-container";
+        document.getElementById("idfalr").className =
+          "ui-panel-dismiss ui-panel-dismiss-position-right ui-panel-dismiss-display-push ui-panel-dismiss-open";
       }
       return {
         ...state,

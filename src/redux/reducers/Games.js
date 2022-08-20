@@ -67,10 +67,8 @@ const Games = (state = initialState, { type, payload }) => {
         Filter_Categori: [],
       };
     case PUT_CASINO_PROV_FILT:
-      const exist = state.filter_provider.some(
-        (item) => item === payload
-      );
-      console.log(exist)
+      const exist = state.filter_provider.some((item) => item === payload);
+      console.log(exist);
       if (exist) {
         return {
           ...state,
@@ -116,7 +114,7 @@ const Games = (state = initialState, { type, payload }) => {
       return {
         ...state,
         searchtext: payload,
-        lastpageloading : 0
+        lastpageloading: 0,
       };
     case PUT_CASINO_OPEND_CATE:
       return {
@@ -180,12 +178,12 @@ const Games = (state = initialState, { type, payload }) => {
         ...state,
         games: listgame,
       };
-   case UPDATE_LAST_PAGE:
-    return {
-      ...state,
-      lastpageloading: state.lastpageloading + 1,
-    };
-      default:
+    case UPDATE_LAST_PAGE:
+      return {
+        ...state,
+        lastpageloading: state.lastpageloading + 1,
+      };
+    default:
       return state;
   }
 };
