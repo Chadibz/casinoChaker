@@ -68,6 +68,7 @@ const Games = (state = initialState, { type, payload }) => {
       };
     case PUT_CASINO_PROV_FILT:
       const exist = state.filter_provider.some((item) => item === payload);
+      console.log(exist);
       if (exist) {
         return {
           ...state,

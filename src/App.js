@@ -1,22 +1,14 @@
 import "./App.css";
 import HeaderP from "./composant/Header/HeaderP";
 
-/*import "./style3.css";
+import "./style3.css";
 import "./style2.css";
 import "./style4.css";
 import "./style1.css";
 
 import "./style5.css";
-import "./style6.css";*/
+import "./style6.css";
 import "./Style7.css";
-
-import "./style9.css";
-
-import "./style12.css";
-import "./style10.css";
-import "./style13.css";
-import "./style11.css";
-import "./style8.css";
 
 import SubHeader from "./composant/Header/SubHeader";
 import HomeP from "./composant/Home/HomeP";
@@ -40,17 +32,9 @@ import AccountFix from "./composant/Account/AccountFix";
 import Langues from "./composant/Header/Langues";
 import Promotion from "./composant/Promotion/Promotion";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { InitGames } from "./redux/actions/Games";
 import { getinitcasino } from "./redux/actions/Providers";
-import HeaderM from "./Mobile/HeaderM/HeaderM";
-import SubHeaderM from "./Mobile/HeaderM/SubHeaderM";
-import Menu from "./Mobile/Menu/Menu";
-import Banner from "./Mobile/Home/Banner";
-import Wrap from "./Mobile/Home/Wrap";
-import HomeMp from "./Mobile/Home/HomeMp";
-import FooterM from "./Mobile/FooterM/FooterM";
-import JeuxMP from "./Mobile/JeuxM/JeuxMP";
 
 function App() {
   const dispatch = useDispatch();
@@ -58,15 +42,9 @@ function App() {
     dispatch(InitGames());
     dispatch(getinitcasino());
   }, []);
+
   return (
-    <>
-      <HeaderM></HeaderM>
-      <SubHeaderM></SubHeaderM>
-      <JeuxMP></JeuxMP>
-      <FooterM></FooterM>
-      <Menu></Menu>
-    </>
-    /*<BrowserRouter>
+    <BrowserRouter>
       <HeaderP></HeaderP>
       <SubHeader></SubHeader>
       <Routes>
@@ -83,7 +61,7 @@ function App() {
       </Routes>
 
       <FooterP></FooterP>
-    </BrowserRouter>*/
+    </BrowserRouter>
   );
 }
 

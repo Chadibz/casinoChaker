@@ -9,14 +9,17 @@ import {
 import moment from "moment";
 
 import axios from "axios";
-const REACT_APP_URL_API = "https://api.gagnant365.com/api/";
+const REACT_APP_URL_API = "https://api.gagnant365.com/api/"
 const REACT_APP_URL_API1 = "http://localhost:64424/api/";
 
 export const getUSerDetails = () => async (dispatch) => {
   try {
-    const result = await axios.post(`${REACT_APP_URL_API}` + "getuser", {
-      token: JSON.parse(localStorage.getItem("token")),
-    });
+    const result = await axios.post(
+      `${REACT_APP_URL_API}` + "getuser",
+      {
+        token: JSON.parse(localStorage.getItem("token")),
+      }
+    );
 
     dispatch({
       type: GET_USER_DETAILS,
@@ -33,7 +36,7 @@ export const getUSerDetails = () => async (dispatch) => {
 export const getsildes = () => async (dispatch) => {
   try {
     const result = await axios.get(
-      `${REACT_APP_URL_API1}` + "Getsliders?lang=fr"
+      `${REACT_APP_URL_API}` + "Getsliders?lang=fr"
     );
 
     dispatch({
@@ -48,15 +51,21 @@ export const getsildes = () => async (dispatch) => {
     });
   }
 };
-export const changedetails = (data, password) => async (dispatch, getState) => {
-  const user = { ...data, dn: moment(data.dn).format("MM-DD-YYYY") };
+export const changedetails = (data,password) => async (dispatch, getState) => {
+
+  const user = {...data,dn:moment(data.dn).format("MM-DD-YYYY")};
 
   try {
-    const result = await axios.post(`${REACT_APP_URL_API}` + "changedetails", {
-      token: JSON.parse(localStorage.getItem("token")),
-      userdetails: user,
-      password: password,
-    });
+    const result = await axios.post(
+      `${REACT_APP_URL_API}` + "changedetails",
+      {
+        token: JSON.parse(localStorage.getItem("token")),
+        userdetails: user,
+        password:password
+       
+      }
+    );
+   
   } catch (error) {
     console.error(error);
   }
@@ -80,7 +89,9 @@ export const GetUserBalance = () => async (dispatch) => {
 };
 export const GetGeolocalisation = () => async (dispatch) => {
   try {
-    const result = await axios.get(`${REACT_APP_URL_API}` + "getuserip");
+    const result = await axios.get(
+      `${REACT_APP_URL_API}` + "getuserip"
+    );
     /* const script = document.createElement("script");
     if (result.data.country_code === "TN") {
       script.src =
@@ -98,7 +109,9 @@ export const GetGeolocalisation = () => async (dispatch) => {
 };
 export const getgammemini = () => async (dispatch, getState) => {
   try {
-    const result = await axios.post(`${REACT_APP_URL_API}` + "getgamesmini");
+    const result = await axios.post(
+      `${REACT_APP_URL_API}` + "getgamesmini"
+    );
 
     dispatch({
       type: GET_MINIGAME,

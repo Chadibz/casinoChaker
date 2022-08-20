@@ -8,7 +8,9 @@ import {
   SET_NAV_BAR_CHANGE,
   SET_NAV_REGISTER_CHANGE,
   SET_NAV_USER_CHANGE,
+  SET_OPEN_MY_BETS,
   SET_PROFILE_STATE_CHANGE,
+  SET_PROFILE_STATE_CHANGE_ONLY,
   SET_START_LOGIN_DATA,
   START_UPDATE_USER_DETAILS,
   UPDATE_USER_BALANCE_TIMER,
@@ -33,6 +35,7 @@ const initialState = {
   isloadingLogin: false,
   isloading: true,
   OpenProfile: false,
+  OpendMyBet: false,
   PageProfile: 0,
 };
 
@@ -63,15 +66,34 @@ const general = (state = initialState, { type, payload }) => {
         opendnavbar: !state.opendnavbar,
       };
     case SET_NAV_USER_CHANGE:
+      if (state.opendnavlogin) {
+        document.body.className = "ui-mobile-viewport ui-overlay-d";
+        document.getElementById("idfalr").className = "ui-panel-dismiss";
+      } else {
+        document.body.className =
+          "ui-mobile-viewport ui-overlay-d ui-panel-page-container-themed ui-panel-page-container-b ui-panel-page-container";
+        document.getElementById("idfalr").className =
+          "ui-panel-dismiss ui-panel-dismiss-position-right ui-panel-dismiss-display-push ui-panel-dismiss-open";
+      }
       return {
         ...state,
         opendnavlogin: !state.opendnavlogin,
+      };
+    case SET_OPEN_MY_BETS:
+      return {
+        ...state,
+        OpendMyBet: !state.OpendMyBet,
       };
     case SET_PROFILE_STATE_CHANGE:
       return {
         ...state,
         OpenProfile: !state.OpenProfile,
-        PageProfile:payload
+        PageProfile: payload,
+      };
+    case SET_PROFILE_STATE_CHANGE_ONLY:
+      return {
+        ...state,
+        PageProfile: payload,
       };
     case SET_NAV_REGISTER_CHANGE:
       return {

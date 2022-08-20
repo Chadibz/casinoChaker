@@ -8,6 +8,7 @@ import {
   UPDATE_HISTORIQUE_SELECt_PAGE,
   UPDATE_HISTORIQUE_TYPE,
   UPDATE_HISTORIQUE_USERNAME,
+  UPDATE_HISTORIQUE_USERNAME2,
 } from "../actions/types";
 import moment from "moment";
 
@@ -18,8 +19,9 @@ const initialState = {
   type_transaction: -1,
   id_transaction: "",
   Page_Selected: 0,
-  Count_Page: 10,
+  Count_Page: 100,
   username: "",
+  username2: "",
   isloading: true,
   totalwidhrow: null,
   totaldepot: null,
@@ -48,6 +50,11 @@ const Historiquetransaction = (state = initialState, { type, payload }) => {
         ...state,
         username: payload,
       };
+    case UPDATE_HISTORIQUE_USERNAME2:
+      return {
+        ...state,
+        username2: payload,
+      };
     case UPDATE_COUNT_HISTORIQUE:
       return {
         ...state,
@@ -62,7 +69,10 @@ const Historiquetransaction = (state = initialState, { type, payload }) => {
         totaldepot: payload.deposit,
         totalwidhrow: payload.withdraw,
         totalrow: payload.totalrow,
-        pagination: payload.totalrow/state.Count_Page >= state.Page_Selected ? true : false,
+        pagination:
+          payload.totalrow / state.Count_Page > state.Page_Selected + 1
+            ? true
+            : false,
       };
     case INIT_HISTORIQUE_TRANCATION:
       return {
