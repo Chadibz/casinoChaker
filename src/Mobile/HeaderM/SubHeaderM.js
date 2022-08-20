@@ -1,4 +1,8 @@
+import { useDispatch } from "react-redux";
+import { SET_NAV_USER_CHANGE } from "../../redux/actions/types";
+
 function SubHeaderM() {
+  const dispatch = useDispatch();
   return (
     <div id="header" class="flex alCen bgMain" style={{ position: "static" }}>
       <a class="LinkToLeftPanel ui-link" href="#left-panel" title=""></a>
@@ -12,7 +16,10 @@ function SubHeaderM() {
       ></a>
 
       <div id="menu-right" class="flex alCen ns jb">
-        <a href="#right-panel" class="platformMobLog btn_sec ns ui-link">
+        <a
+          onClick={() => dispatch({ type: SET_NAV_USER_CHANGE })}
+          class="platformMobLog btn_sec ns ui-link"
+        >
           SE CONNECTER
         </a>
       </div>

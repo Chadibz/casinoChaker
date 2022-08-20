@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 function HeaderM() {
   return (
     <div class="casino_h_link_cont">
       <div class="tabs-box clr_sec">
         <ul class="casino_links_tabs">
           <li>
-            <a class="ui-link" href="/">
+            <Link class="ui-link" to="/">
               <i class="home_icon"></i>
-            </a>
+            </Link>
           </li>
           <li>
             <a class="sportversion ui-link" href="/Sport/ReactIndex">
@@ -32,9 +34,9 @@ function HeaderM() {
             </a>
           </li>
           <li>
-            <a class="ui-link" href="/fr/Lobby/Casino/Main">
+            <Link class="ui-link" to="/Casino">
               JEUX
-            </a>
+            </Link>
           </li>
           <li>
             <a class="ui-link" href="/fr/Lobby/Livecasino/Main">

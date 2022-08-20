@@ -31,8 +31,10 @@ const Live_Game = (state = initialState, { type, payload }) => {
     case SET_LIVE_CASINO_ADD_MORE:
       return { ...state, isloading: true };
     case SET_FOURNISEUR_LIVE_CASINO:
-      const exist = state.filter_provider.some((item) => item === payload);
-      console.log(exist);
+      const exist = state.filter_provider.some(
+        (item) => item === payload
+      );
+      console.log(exist)
       if (exist) {
         return {
           ...state,
@@ -46,9 +48,10 @@ const Live_Game = (state = initialState, { type, payload }) => {
           ...state,
           filter_provider: [...state.filter_provider, payload],
           lastpageloading: 0,
+
         };
       }
-
+     
     case INIT_GAMES_LIVE:
       return {
         ...state,

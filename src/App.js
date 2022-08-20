@@ -1,13 +1,5 @@
 import "./App.css";
-import HeaderP from "./composant/Header/HeaderP";
 
-/*import "./style3.css";
-import "./style2.css";
-import "./style4.css";
-import "./style1.css";
-
-import "./style5.css";
-import "./style6.css";*/
 import "./Style7.css";
 
 import "./style9.css";
@@ -18,29 +10,10 @@ import "./style13.css";
 import "./style11.css";
 import "./style8.css";
 
-import SubHeader from "./composant/Header/SubHeader";
-import HomeP from "./composant/Home/HomeP";
-import FooterP from "./composant/Footer/FooterP";
-import SportvirtuelBanner from "./composant/Sportvirtuel/SportvirtuelBanner";
-import SportVirtuelContent from "./composant/Sportvirtuel/SportVirtuelContent";
-import SportvirtuelP from "./composant/Sportvirtuel/SportvirtuelP";
-import FentonaBanner from "./composant/Fentona/FentonaBanner";
-import FentonaP from "./composant/Fentona/FentonaP";
-import LiveCasinoP from "./composant/LiveCasino/LiveCasinoP";
-import JeuxP from "./composant/Jeux/JeuxP";
-import Login from "./composant/Account/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Registre from "./composant/Account/Registre";
-import Transaction from "./composant/Account/Transaction";
 
-import MonCompte from "./composant/Account/MonCompte";
-import BetHistory from "./composant/Account/BetHistory";
-import Bonus from "./composant/Account/Bonus";
-import AccountFix from "./composant/Account/AccountFix";
-import Langues from "./composant/Header/Langues";
-import Promotion from "./composant/Promotion/Promotion";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { InitGames } from "./redux/actions/Games";
 import { getinitcasino } from "./redux/actions/Providers";
 import HeaderM from "./Mobile/HeaderM/HeaderM";
@@ -51,6 +24,9 @@ import Wrap from "./Mobile/Home/Wrap";
 import HomeMp from "./Mobile/Home/HomeMp";
 import FooterM from "./Mobile/FooterM/FooterM";
 import JeuxMP from "./Mobile/JeuxM/JeuxMP";
+import IdentifierM from "./Mobile/AccountM/IdentifierM";
+import LeftPanel from "./Mobile/Menu/LeftPanel";
+import { SET_NAV_USER_CHANGE } from "./redux/actions/types";
 
 function App() {
   const dispatch = useDispatch();
@@ -58,32 +34,53 @@ function App() {
     dispatch(InitGames());
     dispatch(getinitcasino());
   }, []);
+
+  const { opendnavlogin } = useSelector((state) => state.general);
+
   return (
     <>
-      <HeaderM></HeaderM>
-      <SubHeaderM></SubHeaderM>
-      <JeuxMP></JeuxMP>
-      <FooterM></FooterM>
-      <Menu></Menu>
+      <div
+        id="wrapper"
+        data-role="page"
+        data-theme="d"
+        style={{ overflow: "hidden" }}
+        class="wrapper ui-page ui-page-theme-d ui-page-active"
+        data-url="wrapper"
+        tabindex="0"
+      >
+        {" "}
+        <div id="overlay" class="hidden"></div>
+        <BrowserRouter>
+          <div
+            class={
+              opendnavlogin
+                ? "ui-panel-wrapper ui-panel-animate ui-panel-page-content-position-right ui-panel-page-content-display-push ui-panel-page-content-open"
+                : "ui-panel-wrapper"
+            }
+          >
+            <div data-role="content" class="ui-content" role="main">
+              <HeaderM></HeaderM>
+              <SubHeaderM></SubHeaderM>{" "}
+              <Routes>
+                <Route path="/" element={<HomeMp></HomeMp>}></Route>
+                <Route path="/Casino" element={<JeuxMP></JeuxMP>}></Route>
+              </Routes>
+              <FooterM></FooterM>
+            </div>
+          </div>
+          <IdentifierM></IdentifierM>
+          <LeftPanel></LeftPanel>
+        </BrowserRouter>
+      </div>
+      <div
+        onClick={() => dispatch({ type: SET_NAV_USER_CHANGE })}
+        class={
+          opendnavlogin
+            ? "ui-panel-dismiss ui-panel-dismiss-position-right ui-panel-dismiss-display-push ui-panel-dismiss-open"
+            : "ui-panel-dismiss"
+        }
+      ></div>
     </>
-    /*<BrowserRouter>
-      <HeaderP></HeaderP>
-      <SubHeader></SubHeader>
-      <Routes>
-        <Route path="/Promotions" element={<Promotion></Promotion>}></Route>
-        <Route path="/" element={<HomeP></HomeP>}></Route>
-        <Route path="/Casino" element={<JeuxP></JeuxP>}></Route>
-        <Route path="/LiveCasino" element={<LiveCasinoP></LiveCasinoP>}></Route>
-        <Route
-          path="/Virtualsports"
-          element={<SportvirtuelP></SportvirtuelP>}
-        ></Route>
-        <Route path="/Sport"></Route>
-        <Route path="/"></Route>
-      </Routes>
-
-      <FooterP></FooterP>
-    </BrowserRouter>*/
   );
 }
 

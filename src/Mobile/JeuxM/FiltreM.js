@@ -1,4 +1,25 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  CLEAR_CASINO_CAT_FILT,
+  CLEAR_CASINO_PROV_FILT,
+  PUT_CASINO_CAT_FILT,
+  PUT_CASINO_PROV_FILT,
+  PUT_CASINO_SEARCH_FILT,
+} from "../../redux/actions/types";
 function FiltreM() {
+  const { searchtext, filter_provider, Filter_Categori } = useSelector(
+    (state) => state.Games
+  );
+  const { providers_Casino, categorie } = useSelector(
+    (state) => state.Providers
+  );
+  const [opendprovider, setopendpprovider] = useState(false);
+  const [opendCat, setopendCat] = useState(false);
+  const dispatch = useDispatch();
+  const searchchange = (e) => {
+    dispatch({ type: PUT_CASINO_SEARCH_FILT, payload: e.target.value });
+  };
   return (
     <div class="lc-cat-fixed" id="js_fixed_cont">
       <div class="d-flex">

@@ -6,6 +6,8 @@ import {
   SET_NEW_ERROR_USERNAME,
   START_CREATE_NEW_USER,
 } from "./types";
+const REACT_APP_URL_API1 = "http://localhost:64424/api/";
+const REACT_APP_URL_API = "https://api.gagnant365.com/api/"
 
 export const InsertNewAccount = () => async (dispatch, getState) => {
   const paramfilter = getState();
@@ -51,7 +53,7 @@ export const InsertNewAccount = () => async (dispatch, getState) => {
   };
   try {
     const result = await axios.post(
-      `${process.env.REACT_APP_URL_API}` + "newuser",
+      `${REACT_APP_URL_API}` + "newuser",
       newuser
     );
     if (result.data.status === 400) {

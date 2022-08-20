@@ -1362,7 +1362,87 @@ custom styles
         margin-left: 96px !important;
     }
 }
+/* Sidebar */
+.panel {
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 270px;
+    z-index: 9999;
+    max-height: 100vh;
+}
 
+.panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel ul li.activated {
+    border-bottom: 1px solid #f24d10;
+    border-top: 1px solid #f24d10;
+}
+
+.panel ul li.activatedspan {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 0 #111;
+}
+
+.panel ul li.activated a:before {
+    color: #FFF !important;
+}
+
+.panel ul li.label {
+    border: 0 none;
+    /*font-weight: bold;*/
+    line-height: 40px;
+    min-height: 40px;
+    padding-bottom: 0px;
+    padding-left: 0;
+}
+
+.panel ul li.active {
+
+    z-index: 101;
+}
+
+.panel ul li a.icon-tiles {
+
+    padding-left: 22px;
+}
+
+.panel ul li a.icon-rows {
+
+    padding-left: 22px;
+}
+
+ul.selector li {
+    padding-left: 22px;
+}
+
+.letter_icon {
+    line-height: 1 !important;
+    font-size: 35px !important;
+}
+
+.menu_inbox {
+    column-gap: 5px;
+}
+
+/* FAQ */
+.collapsible>a {
+
+    color: #ee5724;
+    display: block;
+    padding: 5px 0;
+}
+
+.panel .collapsible>a {
+    color: #FFF;
+}
 @media screen and (min-width: 591px) {
     .inboxtitle {
         width: 350px;
@@ -1411,87 +1491,6 @@ custom styles
     z-index: 2;
 }
 
-/* Sidebar */
-.panel {
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 270px;
-    z-index: 9999;
-    max-height: 100vh;
-}
-
-.panel ul {
-    list-style: none;
-    padding: 0;
-}
-
-.panel ul li.activated {
-    border-bottom: 1px solid #f24d10;
-    border-top: 1px solid #f24d10;
-}
-
-.panel ul li.activatedspan {
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 0 0 0 #111;
-}
-
-.panel ul li.activated a:before {
-    color: #FFF !important;
-}
-
-.panel ul li.label {
-    border: 0 none;
-    /*font-weight: bold;*/
-    line-height: 40px;
-    min-height: 40px;
-    padding-bottom: 0px;
-    padding-left: 0;
-}
-
-.panel ul li.active {
-    /*background: url("/Img/mobile/common/icon-radio.png") no-repeat left 50%;*/
-    z-index: 101;
-}
-
-.panel ul li a.icon-tiles {
-    /*background: url("/Img/mobile/common/icon-tiles.png") no-repeat left 50%;*/
-    padding-left: 22px;
-}
-
-.panel ul li a.icon-rows {
-    /*background: url("/Img/mobile/common/icon-rows.png") no-repeat left 50%;*/
-    padding-left: 22px;
-}
-
-ul.selector li {
-    padding-left: 22px;
-}
-
-.letter_icon {
-    line-height: 1 !important;
-    font-size: 35px !important;
-}
-
-.menu_inbox {
-    column-gap: 5px;
-}
-
-/* FAQ */
-.collapsible>a {
-    /*background: url("/Img/mobile/common/icon-down.png") no-repeat right 50%;*/
-    color: #ee5724;
-    display: block;
-    padding: 5px 0;
-}
-
-.panel .collapsible>a {
-    color: #FFF;
-}
 
 .collapsible>ul,
 .collapsible>div {
@@ -1508,7 +1507,7 @@ ul.selector li {
 }
 
 .open>a {
-    /*background: url("/Img/mobile/common/icon-up.png") no-repeat right 50%;*/
+   
 }
 
 .open>ul,
@@ -1576,7 +1575,6 @@ ul.selector li {
 
 /*Popup panel */
 .panel-popup {
-    /*background: #272727 url("/Img/mobile/common/logo.png") no-repeat 20px 20px;*/
     padding: 0;
 }
 
@@ -1643,14 +1641,13 @@ ul.selector li {
 }
 
 .main-menu li.menu a {
-    /*background: url("/Img/mobile/common/icon-menu.png") no-repeat 50% 50%;*/
+    
     display: block;
     height: 50px;
     width: 100%;
 }
 
 .main-menu li.menu {
-    /*background: url("/Img/mobile/common/icon-separator.png") no-repeat right 50%;*/
 }
 
 .main-menu li a.active {
@@ -2148,7 +2145,6 @@ ul.selector li {
 }
 
 .left-toto:before {
-    /*content: url(/img/Mobile/Partners/2/Lototron.png);*/
 }
 
 .extra_color {
@@ -2605,7 +2601,6 @@ ul.selector li {
 }
 
 #footer-menu {
-    /*background: url("/Img/mobile/common/horizontal-separator.png") no-repeat 50% bottom;*/
     padding: 0 15px 20px 15px;
     text-align: center;
 }
@@ -2824,7 +2819,6 @@ a.caption strong {
 }
 
 .loading {
-    /*background: url("/Img/mobile/common/loading.gif") no-repeat 50% 50% !important;*/
     min-height: 200px;
 }
 
@@ -2945,7 +2939,6 @@ a.underline {
 
 
 .dp {
-    /*background: #FFF url("/img/icon-date.png") no-repeat 99% 50%;*/
 }
 
 
@@ -3748,7 +3741,6 @@ li .game-badge span {
 }
 
 .modal-header.large {
-   /* background: url("/Img/mobile/common/LogoNew.png") no-repeat 10px 50%;*/
     border-bottom: 1px solid #d64605;
     height: 90px;
     margin-right: 40px;
@@ -3840,7 +3832,6 @@ padding-right: 0;
 .mobile_body {
     border-bottom: none;
     height: 70px;
-    /*background: url('/img/LogoNew.png') no-repeat 0 50%;*/
 }
 
 .profile_label {
@@ -5605,7 +5596,6 @@ top: 25px;
 }
 
 #home-betgamestvdav {
-    /*background: url(/Img/mobile/partners/1022/bet.jpg);*/
 }
 
 .MpesaText:before {
@@ -5619,7 +5609,6 @@ top: 25px;
     text-align: center;
     height: 20px;
     float: left;
-    /*content: url(/Img/mobile/partners/107/mpesa.png);*/
 }
 
 .MpesaText {
@@ -5642,7 +5631,6 @@ top: 25px;
     text-align: center;
     height: 39px;
     float: left;
-    /*background-image: url(/Img/mobile/partners/107/jambo_mobile.png);*/
     background-size: 100%;
     background-repeat: no-repeat;
     margin-left: 13px;
@@ -6592,7 +6580,8 @@ button.accordion {
 }
 
 .haybet_cont section#content {
-    /*background-image: url(../../Img/partners/1002/tvgames_background.jpg);*/
+    
+    
 }
 
 .haybet_cont .bordered-box {
@@ -8567,7 +8556,7 @@ opacity: 1;
     font-family: ProductIconsFont27;
     content: 'Э';
     text-transform: uppercase;
-     padding: 0 5px;
+    padding: 0 5px;
 }
 
 .inr:after,
@@ -12097,7 +12086,7 @@ a.lm_skillgames:before {
     background-position: bottom;
     width: 100%;
     pointer-events: none;
-    /* background-image: url(../../Img/snow_effect/tree-balls-mob.png);*/
+    /* background-image: url(./img/snow_effect/tree-balls-mob.png);*/
 }
 
 .santa_hat {
@@ -12129,7 +12118,7 @@ a.lm_skillgames:before {
     height: 100vh;
     position: absolute;
     bottom: 0;
-    /*background-image: url(../../Img/snow_effect/snow-forest-mob.png);*/
+    /*background-image: url(./img/snow_effect/snow-forest-mob.png);*/
     background-size: 100% auto;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -12164,7 +12153,7 @@ a.lm_skillgames:before {
     right: -143px;
     height: 350px;
     width: 358px;
-    /* background-image: url(../../Img/snow_effect/snowflakes_tree.png);*/
+    /* background-image: url(./img/snow_effect/snowflakes_tree.png);*/
     pointer-events: none;
     background-size: contain;
 }
@@ -12175,7 +12164,7 @@ a.lm_skillgames:before {
     right: 0;
     left: 0;
     pointer-events: none;
-    /*background-image: url(../../Img/snow_effect/snow3.png), url(../../Img/snow_effect/snow4.png), url(../../Img/snow_effect/snow4.png),url(../../Img/snow_effect/snow3.png);*/
+    /*background-image: url(./img/snow_effect/snow3.png), url(./img/snow_effect/snow4.png), url(./img/snow_effect/snow4.png),url(./img/snow_effect/snow3.png);*/
     background-size: 582px;
     background-position: 0 39px, -177px 66px, 0px 21px, -185px 65px;
     z-index: 101;
@@ -15062,7 +15051,7 @@ a.bonus_btn,
 .dy_payment_icon {
     width: 60px;
     height: 24px;
-    background-image: url(./img/mobile/common/interkassa_sprite_mob.png);
+    background-image: url('./img/mobile/common/interkassa_sprite_mob.png');
     display: inline-block;
     margin: 5px 0;
 }
@@ -17170,7 +17159,7 @@ background-position: -3060px -92px;*/
 .remove_span_recycleBin_paymentcenter {
     height: 40px;
     width: 40px;
-    /*background: url(/Img/recycleBin.svg), red;*/
+    background: url(./img/recycleBin.svg), red;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 19px;
@@ -17184,7 +17173,7 @@ background-position: -3060px -92px;*/
 .remove_span_recycleBin_zpay {
     height: 40px;
     width: 40px;
-    /*background: url(/Img/recycleBin.svg), red;*/
+    background: url(./img/recycleBin.svg), red;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 19px;
@@ -18653,4 +18642,18 @@ ol {
     height: 27px;
     background-image: url(./img/Casino-images-allinone.png);
     background-position: -6593px 211px;
+}
+
+.cryptosol {
+    width: 61px;
+    height: 27px;
+    background-image: url(./img/Casino-images-allinone.png);
+    background-position: 810px 212px;
+}
+
+.cryptoxmr {
+    width: 61px;
+    height: 27px;
+    background-image: url(./img/Casino-images-allinone.png);
+    background-position: 870px 212px;
 }
